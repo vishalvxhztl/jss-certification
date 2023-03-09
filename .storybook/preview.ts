@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react';
 import '../src/assets/styles/global.css';
+import { componentGlobalWrapper } from './decorators';
 
 const preview: Preview = {
   parameters: {
@@ -16,6 +17,6 @@ const preview: Preview = {
   },
 };
 
-const decorators = [];
+export const decorators = [componentGlobalWrapper];
 
 export default preview;
