@@ -28,7 +28,7 @@ const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => {
       data-testid="contentblock"
     >
       <p className="font-bold">ContentBlock</p>
-      <RichTextA11yWrapper field={fields.text} editable />
+      <RichTextA11yWrapper data-testid="contentblock" field={fields.text} editable />
     </div>
   );
 };

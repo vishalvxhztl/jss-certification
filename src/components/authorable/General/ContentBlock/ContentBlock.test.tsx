@@ -1,5 +1,5 @@
 // Test
-import { snapshot, hasDataComponent, renderComponent } from '@/lib/testing/utils';
+import { snapshot, hasDataComponent, renderComponent } from 'lib/testing/utils';
 // Local
 import ContentBlock from './ContentBlock';
 import defaultData, { noData } from './ContentBlock.mock-data';

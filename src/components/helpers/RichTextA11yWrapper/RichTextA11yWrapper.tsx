@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Field, RichText } from '@sitecore-jss/sitecore-jss-nextjs';
 import { RichTextProps } from '@sitecore-jss/sitecore-jss-nextjs/types/components/RichText';
 //Local
-import useExperienceEditor from '@/lib/use-experience-editor';
+import useExperienceEditor from 'lib/use-experience-editor';
 
 const srOnlySpan = '<span class="sr-only"> (Opens in a new tab)</span>';
 

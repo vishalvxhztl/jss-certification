@@ -11,8 +11,21 @@ exports[`renders correctly 1`] = `
   >
     ContentBlock
   </p>
-  <p>
-    This is some plain text content to show the simplest possible example of a implementaiton possible.
-  </p>
+  <div
+    class="rte"
+    data-testid="contentblock"
+  >
+    <p>
+      This is 
+      <em>
+        richtext
+      </em>
+       content to show the 
+      <strong>
+        simplest
+      </strong>
+       possible example of a implementaiton possible.
+    </p>
+  </div>
 </div>
 `;
