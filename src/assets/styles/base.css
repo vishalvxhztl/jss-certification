@@ -1,0 +1,29 @@
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-base;
+  }
+
+  /*
+    Hides Sitecore editor markup,
+    if you run the app in connected mode while the Sitecore cookies
+    are set to edit mode.
+  */
+  .scChromeData,
+  .scpm {
+    display: none !important;
+  }
+
+  /*
+    Styles for default JSS error components
+  */
+  .sc-jss-editing-error,
+  .sc-jss-placeholder-error {
+    background-color: #ffffe0;
+    padding: 1em;
+  }
+}
