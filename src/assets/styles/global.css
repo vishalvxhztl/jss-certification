@@ -1,22 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/*
-  Hides Sitecore editor markup,
-  if you run the app in connected mode while the Sitecore cookies
-  are set to edit mode.
-*/
-.scChromeData,
-.scpm {
-  display: none !important;
-}
+/* Base */
+@import 'tailwindcss/base';
+@import './base.css';
 
-/*
-  Styles for default JSS error components
-*/
-.sc-jss-editing-error,
-.sc-jss-placeholder-error {
-  padding: 1em;
-  background-color: lightyellow;
-}
+/* Components */
+@import 'tailwindcss/components';
 
+/* Utilties */
+@import 'tailwindcss/utilities';
