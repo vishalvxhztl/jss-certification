@@ -35,7 +35,7 @@ const RichTextA11yWrapper = ({ field, editable = true, ...props }: RichTextProps
       a.setAttribute('target', '_blank');
       // Add Screen Reader text and new tab icon
       // eslint-disable-next-line no-param-reassign
-      a.innerHTML = `${a.innerHTML}${srOnlySpan}}`;
+      a.innerHTML = `${a.innerHTML}${srOnlySpan}`;
     });
 
     // Update the content
