@@ -1,0 +1,19 @@
+.base {
+  --theme-body: theme('colors.dark-gray');
+  --theme-btn-bg: theme('colors.white');
+  --theme-btn-bg-hover: theme('colors.primary');
+  --theme-btn-text: theme('colors.secondary');
+  --theme-btn-text-hover: theme('colors.white');
+  --theme-btn-border: theme('colors.primary');
+  --theme-btn-border-hover: theme('colors.primary');
+}
+
+.dark {
+  --theme-body: theme('colors.dark-gray');
+  --theme-btn-bg: theme('colors.secondary');
+  --theme-btn-bg-hover: theme('colors.primary');
+  --theme-btn-text: theme('colors.white');
+  --theme-btn-text-hover: theme('colors.secondary');
+  --theme-btn-border: theme('colors.primary');
+  --theme-btn-border-hover: theme('colors.primary');
+}

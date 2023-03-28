@@ -23,7 +23,7 @@ const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => {
   }
   return (
     <div
-      className="p-2 border border-b-4 border-gray-dark bg-gray-light rounded max-w-lg"
+      className="bg-theme-bg border border-b-4 border-black border-b-primary max-w-lg p-2 rounded"
       data-component="authorable/general/contentblock"
       data-testid="contentblock"
     >
