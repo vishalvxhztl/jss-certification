@@ -4,8 +4,7 @@ import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 // Local
 import RichTextA11yWrapper from 'components/helpers/RichTextA11yWrapper/RichTextA11yWrapper';
 
-// Iideally, all this is from generated Typescript code from Sitecore and we're
-// not manually defining types.
+// Ideally, all this is from generated Typescript code from Sitecore and we're not manually defining types.
 interface Fields {
   text: Field<string>;
 }
@@ -18,9 +17,8 @@ export type ContentBlockProps = {
 
 const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => {
   // Fail out if fields aren't present
-  if (fields === null || fields === undefined) {
-    return <></>;
-  }
+  if (fields === null || fields === undefined) return <></>;
+
   return (
     <div
       className="bg-theme-bg border border-b-4 border-black border-b-primary max-w-lg p-2 rounded"

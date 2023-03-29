@@ -1,11 +1,12 @@
+// Global
 import React from 'react';
 import { Link, LinkProps, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+
 // Lib
 import useExperienceEditor from 'lib/use-experience-editor';
 
 /**
- * This component adds some needed accessibility
- * updates to the JSS Link component
+ * This component adds some needed accessibility updates to the JSS Link component
  */
 
 export interface LinkWrapperProps extends LinkProps {
@@ -33,8 +34,7 @@ const LinkWrapper = React.forwardRef(
 
     const isEE = useExperienceEditor();
 
-    // In experience editor, do not pass any children but retain basic styling
-    // so that double components do not appear when using <Link>
+    // In experience editor, do not pass any children but retain basic styling so that double components do not appear when using <Link>
     if (isEE) {
       return (
         <Link
@@ -48,16 +48,14 @@ const LinkWrapper = React.forwardRef(
     }
 
     // If no content is present, don't print
-    if (!suppressLinkText && !asLinkField.value.text && !asLinkField.value.href) {
-      return <></>;
-    }
+    if (!suppressLinkText && !asLinkField.value.text && !asLinkField.value.href) return <></>;
 
     return (
       <Link
         field={asLinkField}
-        showLinkTextWithChildrenPresent={false}
         internalLinkMatcher={INTERNAL_LINK_REGEX}
         ref={typeof ref !== 'string' ? ref : null}
+        showLinkTextWithChildrenPresent={false}
         {...props}
       >
         {text}
@@ -79,4 +77,5 @@ const LinkWrapper = React.forwardRef(
 );
 
 LinkWrapper.displayName = 'LinkWrapper';
+
 export default LinkWrapper;
