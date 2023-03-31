@@ -1,4 +1,7 @@
+// Global
 import { render } from '@testing-library/react';
+
+// Local
 import RichTextA11yWrapper from './RichTextA11yWrapper';
 import defaultData, { regExTest } from './RichTextA11yWrapper.mock-data';
 

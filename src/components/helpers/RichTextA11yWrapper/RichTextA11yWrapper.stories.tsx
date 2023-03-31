@@ -1,5 +1,6 @@
 // Global
 import type { Meta, StoryObj } from '@storybook/react';
+import { RichTextProps } from '@sitecore-jss/sitecore-jss-nextjs/types/components/RichText';
 
 // Lib
 import { expandObj, flattenObj } from 'lib/object-parser';
@@ -13,7 +14,7 @@ const meta: Meta<typeof RichTextA11yWrapper> = {
   component: RichTextA11yWrapper,
   argTypes: {
     editable: { control: 'boolean' },
-  } as any,
+  },
 };
 
 export default meta;
@@ -22,7 +23,7 @@ type Story = StoryObj<typeof RichTextA11yWrapper>;
 
 export const Default: Story = {
   render: (args) => {
-    return <RichTextA11yWrapper {...expandObj(args)} {...args} />;
+    return <RichTextA11yWrapper {...(expandObj({ ...args }) as RichTextProps)} />;
   },
   args: {
     ...flattenObj(defaultData),

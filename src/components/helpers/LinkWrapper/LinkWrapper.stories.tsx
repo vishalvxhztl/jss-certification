@@ -1,3 +1,6 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+// TODO: Figure out which are the correct types to replace the "any" type definitions in this file.
+
 // Global
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -23,7 +26,7 @@ type Story = StoryObj<typeof LinkWrapper>;
 
 export const Default: Story = {
   render: (args) => {
-    return <LinkWrapper {...expandObj(args)} {...args} />;
+    return <LinkWrapper {...(expandObj({ ...args }) as any)} />;
   },
   args: {
     ...flattenObj(defaultData),
