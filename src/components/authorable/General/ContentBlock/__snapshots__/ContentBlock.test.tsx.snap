@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  class="p-2 border border-b-4 border-gray-dark bg-gray-light rounded max-w-lg"
+  class="border border-b-4 border-gray-dark bg-gray-light max-w-lg p-2 rounded"
   data-component="authorable/general/contentblock"
   data-testid="contentblock"
 >

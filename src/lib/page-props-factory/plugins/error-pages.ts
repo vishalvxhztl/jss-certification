@@ -25,12 +25,16 @@ class ErrorPagesPlugin implements Plugin {
           redirect: {
             destination: resultErrorPages.notFoundPagePath,
             permanent: false,
-          }
-        }
+          },
+        };
       }
     }
 
-    if (isServerSidePropsContext(context) && context.res.statusCode >= 500 && context.res.statusCode <= 511) {
+    if (
+      isServerSidePropsContext(context) &&
+      context.res.statusCode >= 500 &&
+      context.res.statusCode <= 511
+    ) {
       const resultErrorPages = await errorPagesService.fetchErrorPages();
 
       if (resultErrorPages?.serverErrorPagePath) {
@@ -39,8 +43,8 @@ class ErrorPagesPlugin implements Plugin {
           redirect: {
             destination: resultErrorPages.serverErrorPagePath,
             permanent: false,
-          }
-        }
+          },
+        };
       }
     }
 
