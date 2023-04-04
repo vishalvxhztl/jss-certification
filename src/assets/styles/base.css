@@ -37,10 +37,14 @@
 @media (prefers-color-scheme: dark) {
   body:not(.light) {
     @apply text-light-gray;
+
+    background-color: #1b1c1d;
   }
 }
 @media (prefers-color-scheme: light) {
   body.dark {
     @apply text-light-gray;
+
+    background-color: #1b1c1d;
   }
 }

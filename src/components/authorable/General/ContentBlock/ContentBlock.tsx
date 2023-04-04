@@ -21,7 +21,7 @@ const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => {
 
   return (
     <div
-      className="bg-theme-bg border border-b-4 border-black border-b-primary max-w-lg p-2 rounded"
+      className="bg-theme-bg border border-b-4 border-b-primary border-black dark:border-gray dark:border-b-primary max-w-lg p-2 rounded"
       data-component="authorable/general/contentblock"
       data-testid="contentblock"
     >
