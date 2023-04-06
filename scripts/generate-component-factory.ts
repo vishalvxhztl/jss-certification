@@ -28,7 +28,12 @@ import { getItems, watchItems } from './utils';
 */
 
 const componentFactoryPath = path.resolve('src/temp/componentFactory.ts');
-const componentRootPath = 'src/components';
+const componentRootPath = 'src/components/authorable';
+
+// Dont include stories, mock data, tests or reference components
+const fileFormat = new RegExp(
+  /(.+)(?<!\.d)(?<!\.mock-data)(?<!\.stories)(?<!\.test)(?<!\.graphql)\.tsx?$/
+);
 
 const isWatch = process.argv.some((arg) => arg === '--watch');
 
@@ -89,6 +94,7 @@ function getComponentList(path: string): (PackageDefinition | ComponentFile)[] {
       moduleName: name.replace(/[^\w]+/g, ''),
     }),
     cb: (name) => console.debug(`Registering JSS component ${name}`),
+    fileFormat: fileFormat,
   });
 
   return components;

@@ -21,11 +21,3 @@ export type ComponentProps = {
 export type ComponentWithContextProps = ComponentProps & {
   sitecoreContext: SitecoreContextValue;
 };
-
-/**
- * Optional prop used to denote the containing parent's max width
- * This equates to percentage width of the page
- */
-export type ContainedBy = {
-  containedBy?: 100 | 75 | 50 | 25;
-};
