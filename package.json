@@ -48,7 +48,6 @@
     "postcss-loader": "^7.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook-dark-mode": "^2.1.1",
     "style-loader": "^3.3.1"
   },
   "devDependencies": {
@@ -106,6 +105,7 @@
     "sass": "^1.52.3",
     "sass-alias": "^1.0.5",
     "storybook": "7.0.0-rc.7",
+    "storybook-dark-mode": "^2.1.1",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.3",

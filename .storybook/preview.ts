@@ -1,10 +1,9 @@
 // Global
-import type { Decorator, Preview } from '@storybook/react';
-import { SitecoreContextReactContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import type { Preview } from '@storybook/react';
+import { themes } from '@storybook/theming';
 
 // Lib
-import { ThemeContext, ALL_THEMES } from '../src/lib/context/ThemeContext';
-import { mockSitecoreContext } from '../src/lib/testing/mocks';
+import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 
 // Local
 import '../src/assets/styles/global.css';
@@ -35,6 +34,9 @@ const preview: Preview = {
     darkMode: {
       classTarget: 'body',
       stylePreview: true,
+    },
+    docs: {
+      theme: themes.dark,
     },
   },
 };
