@@ -3,8 +3,8 @@ const primary = require('./tailwind.primary');
 const secondary = require('./tailwind.secondary');
 
 module.exports = {
-  base: base,
-  primary,
-  secondary,
+  Base: base,
+  Primary: primary,
+  Secondary: secondary,
   themes: [primary, secondary],
 };

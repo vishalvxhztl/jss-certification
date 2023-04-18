@@ -3,13 +3,33 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 // Local
 import Text, { TEXT_TAGS } from './Text';
-import defaultData, { h1Data, h2Data, h3Data, h4Data, h5Data, h6Data } from './Text.mock-data';
+import defaultData, {
+  blockquote,
+  bold,
+  deleted,
+  em,
+  heading,
+  italics,
+  small,
+  span,
+} from './Text.mock-data';
 
 const meta: Meta<typeof Text> = {
   argTypes: {
+    className: {
+      description: 'CSS classes to be added to the rendered element.',
+    },
+    id: {
+      description: 'The name of the "id" attribute to be added to the rendered element.',
+    },
     tag: {
       control: 'select',
+      defaultValue: 'p',
+      description: 'The HTML tag into which the text will be rendered.',
       options: TEXT_TAGS,
+    },
+    text: {
+      description: 'The text to be rendered.',
     },
   },
   component: Text,
@@ -27,38 +47,50 @@ export const Default: Story = {
   },
 };
 
-export const heading1: Story = {
+export const Blockquote: Story = {
   args: {
-    ...h1Data,
+    ...blockquote,
   },
 };
 
-export const heading2: Story = {
+export const Bold: Story = {
   args: {
-    ...h2Data,
+    ...bold,
   },
 };
 
-export const heading3: Story = {
+export const Deleted: Story = {
   args: {
-    ...h3Data,
+    ...deleted,
   },
 };
 
-export const heading4: Story = {
+export const Em: Story = {
   args: {
-    ...h4Data,
+    ...em,
   },
 };
 
-export const heading5: Story = {
+export const Heading: Story = {
   args: {
-    ...h5Data,
+    ...heading,
   },
 };
 
-export const heading6: Story = {
+export const Italics: Story = {
   args: {
-    ...h6Data,
+    ...italics,
+  },
+};
+
+export const Span: Story = {
+  args: {
+    ...span,
+  },
+};
+
+export const Small: Story = {
+  args: {
+    ...small,
   },
 };

@@ -1,3 +1,5 @@
+import { COLORS } from './constants';
+
 module.exports = {
   name: 'Base',
   extend: {
@@ -19,21 +21,10 @@ module.exports = {
       8: '8px',
     },
     colors: {
-      black: '#000000',
-      'dark-gray': '#444444',
-      gray: '#888888',
-      'light-gray': '#EAEAEA',
-      transparent: 'transparent',
-      white: '#FFFFFF',
-      'theme-bg': 'var(--theme-bg)',
-      'theme-btn-bg-hover': 'var(--theme-btn-bg-hover)',
-      'theme-btn-bg': 'var(--theme-btn-bg)',
-      'theme-btn-text': 'var(--theme-btn-text)',
-      'theme-body': 'var(--theme-body)',
-      'theme-text': 'var(--theme-text)',
-      'theme-btn-text-hover': 'var(--theme-btn-text-hover)',
-      'theme-btn-border': 'var(--theme-btn-border)',
-      'theme-btn-border-hover': 'var(--theme-btn-border-hover)',
+      ...COLORS,
+      'theme-btn-bg': COLORS.primary,
+      'theme-btn-text': COLORS.black,
+      'theme-btn-text-hover': COLORS.turquoise.black,
     },
     extend: {
       gap: {

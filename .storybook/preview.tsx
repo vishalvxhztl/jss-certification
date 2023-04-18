@@ -1,6 +1,8 @@
 // Global
+import { DocsContainer, DocsContainerProps } from '@storybook/blocks';
 import type { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
+console.log(themes);
 
 // Lib
 import { ALL_THEMES } from '../src/lib/context/ThemeContext';
@@ -36,7 +38,7 @@ const preview: Preview = {
       stylePreview: true,
     },
     docs: {
-      theme: themes.dark,
+      theme: themes.light,
     },
   },
 };

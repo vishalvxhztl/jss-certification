@@ -23,7 +23,7 @@ export interface TextProps {
   id?: string;
   tag: string;
   text: string;
-}
+};
 
 const Text = ({ className, id, tag = 'p', text }: TextProps) => {
   return React.createElement(tag, { className, id }, text);
