@@ -22,9 +22,7 @@ module.exports = {
     },
     colors: {
       ...COLORS,
-      'theme-btn-bg': COLORS.primary,
-      'theme-btn-text': COLORS.black,
-      'theme-btn-text-hover': COLORS.turquoise.black,
+      'theme-btn-primary-text': COLORS.black,
     },
     extend: {
       gap: {

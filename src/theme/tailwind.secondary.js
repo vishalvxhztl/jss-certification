@@ -6,9 +6,7 @@ module.exports = {
     colors: {
       ...COLORS,
       primary: COLORS.green,
-      'theme-btn-bg': COLORS.green,
-      'theme-btn-text': COLORS.white,
-      'theme-btn-text-hover': COLORS.gray.light,
+      'theme-btn-primary-text': COLORS.white,
     },
   },
 };

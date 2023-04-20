@@ -5,9 +5,7 @@ module.exports = {
   extend: {
     colors: {
       ...COLORS,
-      'theme-btn-bg': COLORS.primary,
-      'theme-btn-text': COLORS.black,
-      'theme-btn-text-hover': COLORS.turquoise.black,
+      'theme-btn-primary-text': COLORS.black,
     },
   },
 };
