@@ -41,6 +41,7 @@ interface Props {
   onClick?: MouseEventHandler;
   ref?: Ref<HTMLButtonElement | null>;
   tag?: string;
+  title?: string;
   type: string;
 }
 
@@ -59,6 +60,7 @@ const Button = ({
   onClick = () => {},
   ref,
   tag = 'button',
+  title,
   type = 'default',
 }: ButtonProps) => {
   const children = (
@@ -75,7 +77,7 @@ const Button = ({
 
   return React.createElement(
     tag,
-    { className, disabled, id, onClick: () => onClick(), ref },
+    { className, disabled, id, onClick: () => onClick(), ref, title },
     children
   );
 };

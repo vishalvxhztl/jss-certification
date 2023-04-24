@@ -49,8 +49,11 @@ const meta: Meta<typeof Text> = {
     tag: {
       control: 'select',
       defaultValue: 'button',
-      description: 'The HTML tag into which the button will be rendered.',
+      description: 'The HTML tag as which the button will be rendered.',
       options: ['a', 'button'],
+    },
+    title: {
+      description: 'The value of the "title" attribute to be added to the rendered element.',
     },
     type: {
       control: 'select',

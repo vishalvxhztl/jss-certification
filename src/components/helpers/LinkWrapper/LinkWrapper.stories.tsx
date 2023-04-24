@@ -12,7 +12,7 @@ import LinkWrapper from './LinkWrapper';
 import defaultData from './LinkWrapper.mock-data';
 
 const meta: Meta<typeof LinkWrapper> = {
-  title: 'Helpers/LinkWrapper',
+  title: 'Helpers/A11y/LinkWrapper',
   component: LinkWrapper,
   argTypes: {
     'field.value.linktype': { control: 'select', options: ['external'] },

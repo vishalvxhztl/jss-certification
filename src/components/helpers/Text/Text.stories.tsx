@@ -34,7 +34,7 @@ const meta: Meta<typeof Text> = {
   },
   component: Text,
   tags: ['autodocs'],
-  title: 'Helpers/Text',
+  title: 'Helpers/General/Text',
 };
 
 export default meta;
