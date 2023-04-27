@@ -2,21 +2,49 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as FaIcons from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { classnames } from 'tailwindcss-classnames';
 
 const STYLES = {
-  button:
-    'disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap',
-  label: 'gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px',
-  loading: 'animate-spin',
-  minWidth: 'min-w-[10rem]',
+  button: classnames(
+    'disabled:bg-gray-light',
+    'disabled:cursor-not-allowed',
+    'disabled:text-gray',
+    'enabled:duration-150',
+    'enabled:transition',
+    'hover:ease-in',
+    'h-10',
+    'inline-block',
+    'leading-10',
+    'py-0',
+    'px-4',
+    'rounded-md',
+    'text-center',
+    'whitespace-nowrap'
+  ),
+  label: classnames(
+    'gap-4',
+    'h-10',
+    'inline-flex',
+    'items-center',
+    'justify-center',
+    'leading-10',
+    'relative',
+    '-top-px'
+  ),
+  loading: classnames('animate-spin'),
+  minWidth: classnames('min-w-[10rem]'),
   type: {
-    default: 'bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text',
-    secondary: 'bg-rose-dark hover:text-white/50 text-white',
-    abort: 'bg-salmon',
-    errorblack: 'bg-error-black hover:text-white/50 text-white',
-    errorwhite: 'bg-error-white hover:text-white/50 text-white',
-    success: 'bg-beige hover:text-black/50 text-black',
-    warning: 'bg-orange hover:text-white/50 text-white',
+    default: classnames(
+      'bg-primary',
+      'hover:text-theme-btn-primary-text/50',
+      'text-theme-btn-primary-text'
+    ),
+    secondary: classnames('bg-rose-dark', 'hover:text-white/50', 'text-white'),
+    abort: classnames('bg-salmon'),
+    errorblack: classnames('bg-error-black', 'hover:text-white/50', 'text-white'),
+    errorwhite: classnames('bg-error-white', 'hover:text-white/50', 'text-white'),
+    success: classnames('bg-beige', 'hover:text-black/50', 'text-black'),
+    warning: classnames('bg-orange', 'hover:text-white/50', 'text-white'),
   },
 };
 
@@ -73,7 +101,9 @@ const Button = ({
       </div>
     </>
   );
-  const className = `${STYLES.button} ${STYLES.type[type]} ${!auto && STYLES.minWidth}`;
+
+  //const className = `${STYLES.button} ${STYLES.type[type]} ${!auto && STYLES.minWidth}`;
+  const className = classnames(STYLES.button, STYLES.type[type], !auto && STYLES.minWidth);
 
   return React.createElement(
     tag,
