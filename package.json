@@ -111,11 +111,12 @@
     "tailwindcss-themer": "^3.0.1",
     "ts-node": "^9.0.0",
     "typescript": "~4.3.5",
-    "yaml-loader": "^0.6.0"
+    "yaml-loader": "^0.6.0",
+    "yarpm": "^1.2.0"
   },
   "scripts": {
     "bootstrap": "ts-node --project tsconfig.scripts.json scripts/bootstrap.ts && graphql-let",
-    "build": "$npm_execpath run bootstrap && next build",
+    "build": "yarpm run bootstrap && next build",
     "graphql:update": "ts-node --project tsconfig.scripts.json ./scripts/fetch-graphql-introspection-data.ts",
     "jss": "jss",
     "lint:js": "eslint ./src/**/*.tsx ./src/**/*.ts ./scripts/**/*.ts",
@@ -123,13 +124,13 @@
     "next:dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "next:start": "next start",
     "scaffold": "ts-node --project tsconfig.scripts.json scripts/scaffold-component.ts",
-    "start": "cross-env-shell JSS_MODE=disconnected \"$npm_execpath run start:connected\"",
-    "start:connected": "$npm_execpath run bootstrap && ($npm_execpath run next:dev &  $npm_execpath run start:watch-components)",
+    "start": "cross-env-shell JSS_MODE=disconnected \"yarpm run start:connected\"",
+    "start:connected": "yarpm run bootstrap && (yarpm run next:dev &  yarpm run start:watch-components)",
     "start:disconnected-proxy": "ts-node --project tsconfig.scripts.json ./scripts/disconnected-mode-proxy.ts",
-    "start:production": "$npm_execpath run bootstrap && $npm_execpath run next:build && $npm_execpath run next:start",
+    "start:production": "yarpm run bootstrap && yarpm run next:build && yarpm run next:start",
     "start:watch-components": "ts-node --project tsconfig.scripts.json scripts/generate-component-factory.ts --watch",
     "test": "jest",
-    "storybook": "$npm_execpath run bootstrap && storybook dev -p 6006",
-    "build-storybook": "$npm_execpath run bootstrap && storybook build"
+    "storybook": "yarpm run bootstrap && storybook dev -p 6006",
+    "build-storybook": "yarpm run bootstrap && storybook build"
   }
 }
