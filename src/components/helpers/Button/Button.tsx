@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as FaIcons from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { classnames } from 'tailwindcss-classnames';
+import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
 
 export const BUTTON_TYPES = [
@@ -36,8 +36,8 @@ export type ButtonProps = Props & NativeAttrs;
 
 const buttonSlots = tv({
   slots: {
-    spinner: classnames('animate-spin'),
-    text: classnames(
+    spinner: clsx('animate-spin'),
+    text: clsx(
       'gap-4',
       'h-10',
       'inline-flex',
@@ -51,7 +51,7 @@ const buttonSlots = tv({
 });
 
 const buttonVariants = tv({
-  base: classnames(
+  base: clsx(
     'disabled:bg-gray-light',
     'disabled:cursor-not-allowed',
     'disabled:text-gray',
@@ -72,20 +72,20 @@ const buttonVariants = tv({
   },
   variants: {
     type: {
-      default: classnames(
+      default: clsx(
         'bg-primary',
         'hover:text-theme-btn-primary-text/50',
         'text-theme-btn-primary-text'
       ),
-      secondary: classnames('bg-rose-dark', 'hover:text-white/50', 'text-white'),
-      abort: classnames('bg-salmon'),
-      errorblack: classnames('bg-error-black', 'hover:text-white/50', 'text-white'),
-      errorwhite: classnames('bg-error-white', 'hover:text-white/50', 'text-white'),
-      success: classnames('bg-beige', 'hover:text-black/50', 'text-black'),
-      warning: classnames('bg-orange', 'hover:text-white/50', 'text-white'),
+      secondary: clsx('bg-rose-dark', 'hover:text-white/50', 'text-white'),
+      abort: clsx('bg-salmon'),
+      errorblack: clsx('bg-error-black', 'hover:text-white/50', 'text-white'),
+      errorwhite: clsx('bg-error-white', 'hover:text-white/50', 'text-white'),
+      success: clsx('bg-beige', 'hover:text-black/50', 'text-black'),
+      warning: clsx('bg-orange', 'hover:text-white/50', 'text-white'),
     },
     minWidth: {
-      true: classnames('min-w-[10rem]'),
+      true: clsx('min-w-[10rem]'),
     },
   },
 });
