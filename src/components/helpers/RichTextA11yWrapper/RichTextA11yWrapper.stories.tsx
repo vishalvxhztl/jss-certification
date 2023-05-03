@@ -10,7 +10,7 @@ import RichTextA11yWrapper from './RichTextA11yWrapper';
 import defaultData from './RichTextA11yWrapper.mock-data';
 
 const meta: Meta<typeof RichTextA11yWrapper> = {
-  title: 'Helpers/RichTextA11yWrapper',
+  title: 'Helpers/A11y/RichTextA11yWrapper',
   component: RichTextA11yWrapper,
   argTypes: {
     editable: { control: 'boolean' },

@@ -1,11 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+import { COLORS } from './constants';
 
 module.exports = {
   name: 'Primary',
   extend: {
     colors: {
-      primary: '#7FC3BA',
-      secondary: '#001722',
+      ...COLORS,
+      'theme-btn-primary-text': COLORS.black,
     },
   },
 };
