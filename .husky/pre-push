@@ -9,7 +9,7 @@ nojira="NOJIRA"
 # Get the current branch and apply it to a variable
 currentbranch=`git branch | grep \* | cut -d ' ' -f2`
 # Test current branch name
-if [[ "$currentbranch" =~ ^(release|hotfix|feature|bug)/($jiraname | $nojira)-[0-9]+-[a-z0-9-]+ ]]
+if [[ "$currentbranch" =~ ^(release|hotfix|feature|bug)/($jiraname|$nojira)-[0-9]+-[a-z0-9-]+ ]]
 then
   echo "$currentbranch is properly formatted"
   echo " "
