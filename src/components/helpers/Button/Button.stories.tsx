@@ -1,10 +1,14 @@
 // Global
-import * as FaIcons from '@fortawesome/free-solid-svg-icons';
 import type { Meta, StoryObj } from '@storybook/react';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 // Local
 import Button, { BUTTON_TYPES } from './Button';
 import defaultData, { disabled, iconLeft, iconOnly, iconRight, loading } from './Button.mock-data';
+
+const iconOptions = Object.keys(fas)
+  .map((key) => fas[key].iconName)
+  .sort();
 
 const meta: Meta<typeof Text> = {
   argTypes: {
@@ -21,12 +25,12 @@ const meta: Meta<typeof Text> = {
     iconLeft: {
       control: 'select',
       description: "Specifies an icon to appear to the left of the button's label.",
-      options: Object.keys(FaIcons),
+      options: iconOptions,
     },
     iconRight: {
       control: 'select',
       description: "Specifies an icon to appear to the right of the button's label.",
-      options: Object.keys(FaIcons),
+      options: iconOptions,
     },
     id: {
       description: 'The name of the "id" attribute to be added to the rendered element.',
