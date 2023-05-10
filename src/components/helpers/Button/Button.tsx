@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
 
 // Local
-import FontAwesomeIcon from '../FontAwesomeIcon/FontAwesomeIcon';
+import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
 
 export const BUTTON_TYPES = [
   'default',
