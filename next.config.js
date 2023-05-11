@@ -2,7 +2,6 @@ const jssConfig = require('./src/temp/config');
 const packageConfig = require('./package.json').config;
 const { getPublicUrl } = require('@sitecore-jss/sitecore-jss-nextjs');
 const plugins = require('./src/temp/next-config-plugins') || {};
-
 const publicUrl = getPublicUrl();
 
 /**

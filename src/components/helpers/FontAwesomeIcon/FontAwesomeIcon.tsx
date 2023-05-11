@@ -1,12 +1,12 @@
 // Global
 import {
   FontAwesomeIcon as FontAwesomeIconInternal,
-  FontAwesomeIconProps,
+  FontAwesomeIconProps as FontAwesomeIconPropsInternal,
 } from '@fortawesome/react-fontawesome';
 
 interface Props {}
 
-export type IconProps = Props & FontAwesomeIconProps;
+export type FontAwesomeIconProps = Props & FontAwesomeIconPropsInternal;
 
 const FontAwesomeIcon = ({
   beat,
@@ -38,7 +38,7 @@ const FontAwesomeIcon = ({
   title,
   titleId,
   transform,
-}: IconProps) => {
+}: FontAwesomeIconProps) => {
   return (
     <FontAwesomeIconInternal
       beat={beat}
