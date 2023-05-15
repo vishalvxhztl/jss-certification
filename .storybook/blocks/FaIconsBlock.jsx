@@ -1,17 +1,27 @@
 // Global
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as FaIcons from '@fortawesome/free-solid-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { IconGallery, IconItem, Title, useOf } from '@storybook/blocks';
 
+import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
+
 export const FaIconsBlock = ({ of }) => {
+  const icons = [];
+
+  Object.entries(fas).forEach(([key, value]) => icons.push(value.iconName));
+
+  icons.sort();
+
+  const filteredIcons = [...new Set(icons)];
+
   return (
-    <IconGallery>
-      {console.log(Object.keys(FaIcons))}
-      {Object.keys(FaIcons).map((key) => (
-        <IconItem name={key}>
-          <FontAwesomeIcon icon={FaIcons[key]} />
-        </IconItem>
-      ))}
-    </IconGallery>
+    <>
+      <IconGallery>
+        {filteredIcons.map((iconName) => (
+          <IconItem key={iconName} name={iconName}>
+            <FontAwesomeIcon icon={iconName} />
+          </IconItem>
+        ))}
+      </IconGallery>
+    </>
   );
 };

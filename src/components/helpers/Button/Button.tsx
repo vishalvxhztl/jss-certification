@@ -1,9 +1,11 @@
 // Global
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as FaIcons from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import React, { MouseEventHandler, Ref } from 'react';
 import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
+
+// Local
+import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
 
 export const BUTTON_TYPES = [
   'default',
@@ -36,7 +38,6 @@ export type ButtonProps = Props & NativeAttrs;
 
 const buttonSlots = tv({
   slots: {
-    spinner: clsx('animate-spin'),
     text: clsx(
       'gap-4',
       'h-10',
@@ -104,14 +105,14 @@ const Button = ({
   title,
   type = 'default',
 }: ButtonProps) => {
-  const { spinner, text } = buttonSlots();
+  const { text } = buttonSlots();
   const children = (
     <>
       <div className={text()}>
-        {iconLeft && <FontAwesomeIcon icon={FaIcons[iconLeft]} />}
-        {loading && <FontAwesomeIcon className={spinner()} icon={FaIcons['faSpinner']} />}
+        {iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
+        {loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
         {label && !loading && label}
-        {iconRight && <FontAwesomeIcon icon={FaIcons[iconRight]} />}
+        {iconRight && <FontAwesomeIcon icon={iconRight as IconProp} />}
       </div>
     </>
   );
@@ -119,7 +120,14 @@ const Button = ({
 
   return React.createElement(
     tag,
-    { className, disabled, id, onClick: () => onClick(), ref, title },
+    {
+      className,
+      disabled,
+      id,
+      onClick: (evt: React.MouseEvent<Element, MouseEvent>) => onClick(evt),
+      ref,
+      title,
+    },
     children
   );
 };

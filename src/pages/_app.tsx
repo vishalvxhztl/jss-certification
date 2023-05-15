@@ -1,7 +1,18 @@
+// Global
 import type { AppProps } from 'next/app';
 import { I18nProvider } from 'next-localization';
+
+// Lib
 import { SitecorePageProps } from 'lib/page-props';
+
+// Local
 import '../assets/styles/global.css';
+
+// Fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
   const { dictionary, ...rest } = pageProps;
 

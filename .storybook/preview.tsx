@@ -11,6 +11,11 @@ import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 import '../src/assets/styles/global.css';
 import { componentGlobalWrapper, componentThemeWrapper } from './decorators';
 
+// Fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
+
 const preview: Preview = {
   globalTypes: {
     theme: {

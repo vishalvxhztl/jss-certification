@@ -13,6 +13,7 @@ specifiers:
   '@graphql-codegen/typescript-operations': ^1.17.9
   '@graphql-codegen/typescript-resolvers': ^1.17.10
   '@graphql-typed-document-node/core': ^3.1.0
+  '@material-icons/svg': ^1.0.33
   '@sitecore-jss/sitecore-jss-cli': ^21.1.0
   '@sitecore-jss/sitecore-jss-dev-tools': ^21.1.0
   '@sitecore-jss/sitecore-jss-nextjs': ^21.1.0
@@ -39,6 +40,7 @@ specifiers:
   '@typescript-eslint/parser': ^4.29.1
   autoprefixer: ^10.4.13
   axios: ^0.21.1
+  babel-plugin-macros: ^3.1.0
   bootstrap: ^5.1.3
   chalk: ~2.4.2
   chokidar: ~3.1.1
@@ -91,7 +93,9 @@ dependencies:
   '@fortawesome/free-regular-svg-icons': 6.4.0
   '@fortawesome/free-solid-svg-icons': 6.4.0
   '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
+  '@material-icons/svg': 1.0.33
   '@sitecore-jss/sitecore-jss-nextjs': 21.1.0_dhd5wkzbfkaxgmwuohu6whz4wu
+  babel-plugin-macros: 3.1.0
   bootstrap: 5.2.3
   clsx: 1.2.1
   css-loader: 6.7.3
@@ -100,7 +104,7 @@ dependencies:
   graphql-tag: 2.12.6_graphql@15.8.0
   husky: 8.0.3
   lodash: 4.17.21
-  next: 13.2.4_4pgn6omj4irpgog4tpnzary34q
+  next: 13.2.4_25kmi7vfezlcrjsbskfdxaf5qu
   next-localization: 0.12.0_react@18.2.0
   nprogress: 0.2.0
   postcss-loader: 7.0.2_postcss@8.4.21
@@ -125,7 +129,7 @@ devDependencies:
   '@storybook/addon-links': 7.0.0-rc.0_biqbaboplfbrettd7655fr4n2y
   '@storybook/blocks': 7.0.0-rc.0_biqbaboplfbrettd7655fr4n2y
   '@storybook/manager-api': 7.0.4_biqbaboplfbrettd7655fr4n2y
-  '@storybook/nextjs': 7.0.0-rc.0_xhz6w3tkn2csr73bpznomhufzi
+  '@storybook/nextjs': 7.0.0-rc.0_bysi2wgtomxjpxdz5xwr735ypu
   '@storybook/react': 7.0.0-rc.0_xtp6apf4fp2ko5pdio2evwipiy
   '@storybook/testing-library': 0.0.14-next.1
   '@storybook/theming': 7.0.4_biqbaboplfbrettd7655fr4n2y
@@ -1670,7 +1674,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
-    dev: true
 
   /@babel/template/7.20.7:
     resolution: {integrity: sha512-8SegXApWe6VoNw0r9JHpSteLKTpTiLZ4rMlGIm9JQ18KiCtyQiAMEazujAHrUS5flrcqYZa75ukev3P6QmUwUw==}
@@ -3214,6 +3217,10 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
+  /@material-icons/svg/1.0.33:
+    resolution: {integrity: sha512-sYXcybBWH3rNijK1D6Dv1Se/aZ7OAC2cCNkn4HiZOXQwkswtRVoDqHPw+GfsBoIC70UintfPXUsmiuaxMicWtw==}
+    dev: false
+
   /@mdx-js/mdx/1.6.22:
     resolution: {integrity: sha512-AMxuLxPz2j5/6TpF/XSdKpQP1NlG0z11dFOlq+2IP/lSgl11GY8ji6S/rgsViN/L0BDvHvUMruRb7ub+24LUYA==}
     dependencies:
@@ -3571,7 +3578,7 @@ packages:
       '@sitecore-jss/sitecore-jss': 21.1.0
       '@sitecore-jss/sitecore-jss-dev-tools': 21.1.0_jrzjbygkt2ozxk6uo7ygegnl4a
       '@sitecore-jss/sitecore-jss-react': 21.1.0_biqbaboplfbrettd7655fr4n2y
-      next: 13.2.4_4pgn6omj4irpgog4tpnzary34q
+      next: 13.2.4_25kmi7vfezlcrjsbskfdxaf5qu
       node-html-parser: 6.1.5
       prop-types: 15.8.1
       react: 18.2.0
@@ -4814,7 +4821,7 @@ packages:
     resolution: {integrity: sha512-ONvFBZySHsBIkUYGrUM8FCG2tDKf663TIErztPSOghOpmBGyFLjSsXJHkNWiRi4c740PoemLqJd2XZZVlXRVLQ==}
     dev: true
 
-  /@storybook/nextjs/7.0.0-rc.0_xhz6w3tkn2csr73bpznomhufzi:
+  /@storybook/nextjs/7.0.0-rc.0_bysi2wgtomxjpxdz5xwr735ypu:
     resolution: {integrity: sha512-Qxqz3hYKolzsXewkUf9AeOB7kyZK0uDAJXa24bm8QKEqeaDxMY+54ZV8WUmITTMiU60RF05BtONdaS90CnBC7Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -4863,7 +4870,7 @@ packages:
       fs-extra: 11.1.0
       image-size: 1.0.2
       loader-utils: 3.2.1
-      next: 13.2.4_4pgn6omj4irpgog4tpnzary34q
+      next: 13.2.4_25kmi7vfezlcrjsbskfdxaf5qu
       pnp-webpack-plugin: 1.7.0_typescript@4.3.5
       postcss: 8.4.21
       postcss-loader: 7.0.2_postcss@8.4.21
@@ -4873,7 +4880,7 @@ packages:
       sass-loader: 12.6.0_sass@1.58.3
       semver: 7.3.8
       style-loader: 3.3.1
-      styled-jsx: 5.1.1_q2tyk3gci27qk4qoatek53e4vi
+      styled-jsx: 5.1.1_5pqb5fl5e5g6rfwt5mdsuw32nq
       ts-dedent: 2.2.0
       tsconfig-paths: 4.1.2
       tsconfig-paths-webpack-plugin: 3.5.2
@@ -6848,7 +6855,6 @@ packages:
       '@babel/runtime': 7.21.0
       cosmiconfig: 7.1.0
       resolve: 1.22.1
-    dev: true
 
   /babel-plugin-named-exports-order/0.0.2:
     resolution: {integrity: sha512-OgOYHOLoRK+/mvXU9imKHlG6GkPLYrUCvFXG/CM93R/aNNO8pOOF4aS+S8CCHMDQoNSeiOYEZb/G6RwL95Jktw==}
@@ -9027,7 +9033,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.7.1_eslint@7.32.0
       eslint-plugin-react: 7.32.2_eslint@7.32.0
       eslint-plugin-react-hooks: 4.6.0_eslint@7.32.0
-      next: 13.2.4_4pgn6omj4irpgog4tpnzary34q
+      next: 13.2.4_25kmi7vfezlcrjsbskfdxaf5qu
       typescript: 4.3.5
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
@@ -13159,7 +13165,7 @@ packages:
       rosetta: 1.1.0
     dev: false
 
-  /next/13.2.4_4pgn6omj4irpgog4tpnzary34q:
+  /next/13.2.4_25kmi7vfezlcrjsbskfdxaf5qu:
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -13187,7 +13193,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       sass: 1.58.3
-      styled-jsx: 5.1.1_q2tyk3gci27qk4qoatek53e4vi
+      styled-jsx: 5.1.1_5pqb5fl5e5g6rfwt5mdsuw32nq
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -14606,7 +14612,6 @@ packages:
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
-    dev: true
 
   /regenerator-transform/0.15.1:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
@@ -15754,7 +15759,7 @@ packages:
       inline-style-parser: 0.1.1
     dev: false
 
-  /styled-jsx/5.1.1_q2tyk3gci27qk4qoatek53e4vi:
+  /styled-jsx/5.1.1_5pqb5fl5e5g6rfwt5mdsuw32nq:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -15768,6 +15773,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.21.0
+      babel-plugin-macros: 3.1.0
       client-only: 0.0.1
       react: 18.2.0
 

@@ -25,7 +25,7 @@ export const iconLeft = {
 export const iconOnly = {
   ...defaultData,
   auto: true,
-  iconLeft: 'faPowerOff',
+  iconLeft: 'power-off',
   label: undefined,
 };
 
