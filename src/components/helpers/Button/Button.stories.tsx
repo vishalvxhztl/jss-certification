@@ -68,7 +68,7 @@ const meta: Meta<typeof Text> = {
   },
   component: Button,
   tags: ['autodocs'],
-  title: 'Helpers/Button',
+  title: 'Helpers/General/Button',
 };
 
 export default meta;

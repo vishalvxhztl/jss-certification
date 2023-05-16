@@ -190,7 +190,7 @@ const meta: Meta<typeof Text> = {
   },
   component: FontAwesomeIcon,
   tags: ['autodocs'],
-  title: 'Helpers/Font Awesome Icon',
+  title: 'Helpers/General/Font Awesome Icon',
 };
 
 export default meta;

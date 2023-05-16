@@ -26,7 +26,7 @@ const meta: Meta<typeof GoogleMaterialSymbol> = {
   },
   component: GoogleMaterialSymbol,
   tags: ['autodocs'],
-  title: 'Helpers/Google Material Symbol',
+  title: 'Helpers/General/Google Material Symbol',
 };
 
 export default meta;
