@@ -1,14 +1,20 @@
 // Global
-import type { Decorator, Preview } from '@storybook/react';
-import { SitecoreContextReactContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { DocsContainer, DocsContainerProps } from '@storybook/blocks';
+import type { Preview } from '@storybook/react';
+import { themes } from '@storybook/theming';
+console.log(themes);
 
 // Lib
-import { ThemeContext, ALL_THEMES } from '../src/lib/context/ThemeContext';
-import { mockSitecoreContext } from '../src/lib/testing/mocks';
+import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 
 // Local
 import '../src/assets/styles/global.css';
 import { componentGlobalWrapper, componentThemeWrapper } from './decorators';
+
+// Fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 const preview: Preview = {
   globalTypes: {
@@ -35,6 +41,9 @@ const preview: Preview = {
     darkMode: {
       classTarget: 'body',
       stylePreview: true,
+    },
+    docs: {
+      theme: themes.light,
     },
   },
 };
