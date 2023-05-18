@@ -1,4 +1,4 @@
-import { COLORS } from './constants';
+const COLORS = require('./constants');
 
 module.exports = {
   name: 'Primary',

@@ -1,4 +1,4 @@
-export const COLORS = {
+module.exports = {
   beige: '#f0efe7',
   black: '#2f2d2e',
   currentColor: 'currentColor',
