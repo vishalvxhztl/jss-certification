@@ -10,7 +10,7 @@ export type GoogleMaterialSymbolProps = {
 };
 
 const GoogleMaterialSymbol = ({ icon, variant = 'round' }: GoogleMaterialSymbolProps) => {
-  let [fetchedIcon, setFetchedIcon] = useState('');
+  const [fetchedIcon, setFetchedIcon] = useState('');
 
   useEffect(() => {
     if (!icon || !variant) return;
