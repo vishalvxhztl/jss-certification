@@ -11,6 +11,9 @@ const styles = ['baseline', 'outline', 'round', 'sharp', 'twotone'];
 
 const meta: Meta<typeof GoogleMaterialSymbol> = {
   argTypes: {
+    className: {
+      description: 'CSS classes to be applied to the icon.',
+    },
     icon: {
       control: 'select',
       defaultValue: 'cached',

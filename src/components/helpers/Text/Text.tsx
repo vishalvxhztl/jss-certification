@@ -1,5 +1,5 @@
 // Global
-import React from 'react';
+import { createElement } from 'react';
 
 export const TEXT_TAGS = [
   'p',
@@ -23,10 +23,10 @@ export interface TextProps {
   id?: string;
   tag: string;
   text: string;
-};
+}
 
 const Text = ({ className, id, tag = 'p', text }: TextProps) => {
-  return React.createElement(tag, { className, id }, text);
+  return createElement(tag, { className, id }, text);
 };
 
 export default Text;

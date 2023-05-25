@@ -13,6 +13,7 @@ specifiers:
   '@graphql-codegen/typescript-operations': ^1.17.9
   '@graphql-codegen/typescript-resolvers': ^1.17.10
   '@graphql-typed-document-node/core': ^3.1.0
+  '@hedgedoc/html-to-react': ^2.0.0
   '@material-icons/svg': ^1.0.33
   '@sitecore-jss/sitecore-jss-cli': ^21.1.0
   '@sitecore-jss/sitecore-jss-dev-tools': ^21.1.0
@@ -94,6 +95,7 @@ dependencies:
   '@fortawesome/free-regular-svg-icons': 6.4.0
   '@fortawesome/free-solid-svg-icons': 6.4.0
   '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
+  '@hedgedoc/html-to-react': 2.0.0_react@18.2.0
   '@material-icons/svg': 1.0.33
   '@sitecore-jss/sitecore-jss-nextjs': 21.1.5_y5tb5orucqfvu4v7fq5wmltwgq
   babel-plugin-macros: 3.1.0
@@ -2451,6 +2453,18 @@ packages:
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
     dependencies:
       '@hapi/hoek': 9.3.0
+
+  /@hedgedoc/html-to-react/2.0.0_react@18.2.0:
+    resolution: {integrity: sha512-2bc3vLaQ9eyzUd8Q1860Pj3sl+AEIMRSyRACDNR9TbJwst4WLu6OBjNcZ3H7l3Dq4fZDPdZ9TrFeHKvdqc+ihw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.0'
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      htmlparser2: 9.0.0
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}
@@ -8755,6 +8769,15 @@ packages:
 
   /htmlparser2/8.0.2:
     resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.1.0
+      entities: 4.5.0
+    dev: false
+
+  /htmlparser2/9.0.0:
+    resolution: {integrity: sha512-uxbSI98wmFT/G4P2zXx4OVx04qWUmyFPrD2/CNepa2Zo3GPNaCaaxElDgwUrwYWkK1nr9fft0Ya8dws8coDLLQ==}
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
