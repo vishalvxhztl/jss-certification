@@ -3,7 +3,7 @@ const defaultData = {
   disabled: false,
   label: 'Button',
   loading: false,
-  onClick: () => console.log('A button was clicked!'),
+  onClick: (): void => console.log('A button was clicked!'),
   ref: null,
   tag: 'button',
   type: 'default',

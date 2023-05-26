@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import React, { MouseEventHandler, Ref } from 'react';
+import React, { MouseEventHandler, ReactElement, Ref } from 'react';
 import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
 
@@ -17,6 +19,8 @@ export const BUTTON_TYPES = [
   'warning',
 ];
 
+type Type = (typeof BUTTON_TYPES)[number];
+
 interface Props {
   auto?: boolean;
   disabled?: boolean;
@@ -32,7 +36,7 @@ interface Props {
   type: string;
 }
 
-type NativeAttrs = Omit<React.ButtonHTMLAttributes<any>, keyof Props>;
+type NativeAttrs = Omit<React.ButtonHTMLAttributes<undefined>, keyof Props>;
 
 export type ButtonProps = Props & NativeAttrs;
 
@@ -99,12 +103,12 @@ const Button = ({
   id,
   label,
   loading = false,
-  onClick = () => {},
+  onClick = (): void => {},
   ref,
   tag = 'button',
   title,
-  type = 'default',
-}: ButtonProps) => {
+  type = 'default' as Type,
+}: ButtonProps): ReactElement => {
   const { text } = buttonSlots();
   const children = (
     <>
