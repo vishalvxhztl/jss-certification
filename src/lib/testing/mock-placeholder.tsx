@@ -53,6 +53,7 @@ export const getSampleRenderingContext = (
 
   return context;
 };
+
 /* "any" should be "ContainedBy", however "ContainedBy" is not currently an export of "../component-props". */
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 const SamplePlaceholderComponent = ({ containedBy }: any): JSX.Element => (
