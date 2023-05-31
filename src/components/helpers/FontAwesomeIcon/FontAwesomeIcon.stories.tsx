@@ -32,7 +32,7 @@ const sizeOptions = [
   '10x',
 ];
 
-const meta: Meta<typeof Text> = {
+const meta: Meta<typeof FontAwesomeIcon> = {
   argTypes: {
     beat: {
       control: 'boolean',

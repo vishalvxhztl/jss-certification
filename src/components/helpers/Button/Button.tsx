@@ -17,9 +17,9 @@ export const BUTTON_TYPES = [
   'errorwhite',
   'success',
   'warning',
+  'foobar',
+  undefined,
 ];
-
-type Type = (typeof BUTTON_TYPES)[number];
 
 interface Props {
   auto?: boolean;
@@ -37,6 +37,15 @@ interface Props {
 }
 
 type NativeAttrs = Omit<React.ButtonHTMLAttributes<undefined>, keyof Props>;
+
+type Variant =
+  | 'default'
+  | 'secondary'
+  | 'errorblack'
+  | 'errorwhite'
+  | 'success'
+  | 'warning'
+  | undefined;
 
 export type ButtonProps = Props & NativeAttrs;
 
@@ -107,7 +116,7 @@ const Button = ({
   ref,
   tag = 'button',
   title,
-  type = 'default' as Type,
+  type = 'default',
 }: ButtonProps): ReactElement => {
   const { text } = buttonSlots();
   const children = (
@@ -120,7 +129,8 @@ const Button = ({
       </div>
     </>
   );
-  const className = buttonVariants({ minWidth: !auto, type });
+
+  const className = buttonVariants({ minWidth: !auto, type: type as Variant });
 
   return React.createElement(
     tag,
