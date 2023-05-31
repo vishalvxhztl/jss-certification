@@ -38,7 +38,7 @@ interface Props {
 
 type NativeAttrs = Omit<React.ButtonHTMLAttributes<undefined>, keyof Props>;
 
-type Variant =
+type Variants =
   | 'default'
   | 'secondary'
   | 'errorblack'
@@ -130,7 +130,7 @@ const Button = ({
     </>
   );
 
-  const className = buttonVariants({ minWidth: !auto, type: type as Variant });
+  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
 
   return React.createElement(
     tag,
