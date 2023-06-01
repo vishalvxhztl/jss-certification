@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import React, { MouseEventHandler, ReactElement, Ref } from 'react';
@@ -112,7 +110,7 @@ const Button = ({
   id,
   label,
   loading = false,
-  onClick = (): void => {},
+  onClick = (): void => undefined,
   ref,
   tag = 'button',
   title,

@@ -3,10 +3,9 @@ import {
   FontAwesomeIcon as FontAwesomeIconInternal,
   FontAwesomeIconProps as FontAwesomeIconPropsInternal,
 } from '@fortawesome/react-fontawesome';
+import { ReactElement } from 'react';
 
-interface Props {}
-
-export type FontAwesomeIconProps = Props & FontAwesomeIconPropsInternal;
+export type FontAwesomeIconProps = FontAwesomeIconPropsInternal;
 
 const FontAwesomeIcon = ({
   beat,
@@ -38,7 +37,7 @@ const FontAwesomeIcon = ({
   title,
   titleId,
   transform,
-}: FontAwesomeIconProps) => {
+}: FontAwesomeIconProps): ReactElement => {
   return (
     <FontAwesomeIconInternal
       beat={beat}
