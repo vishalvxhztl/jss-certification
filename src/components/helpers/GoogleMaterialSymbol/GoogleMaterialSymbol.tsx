@@ -1,6 +1,6 @@
 // Global
 import { convertHtmlToReact } from '@hedgedoc/html-to-react';
-import { useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 
 type ImportProps = {
   default: {
@@ -8,7 +8,7 @@ type ImportProps = {
   };
 };
 
-type Variant = 'baseline' | 'outline' | 'round' | 'sharp' | 'twotone';
+export type Variant = 'baseline' | 'outline' | 'round' | 'sharp' | 'twotone';
 
 export type GoogleMaterialSymbolProps = {
   className: string;
@@ -19,8 +19,8 @@ export type GoogleMaterialSymbolProps = {
 const GoogleMaterialSymbol = ({
   className,
   icon,
-  variant = 'round',
-}: GoogleMaterialSymbolProps) => {
+  variant = 'round' as Variant,
+}: GoogleMaterialSymbolProps): ReactElement => {
   const [fetchedIcon, setFetchedIcon] = useState('');
 
   useEffect(() => {

@@ -116,9 +116,9 @@ function baseComponentFactory(componentName: string, exportName?: string, isEdit
     return component.element(isEditing);
   }
 
-  // if (exportName && exportName !== DEFAULT_EXPORT_NAME) {
-  //   return component[exportName];
-  // }
+  if (exportName && exportName !== DEFAULT_EXPORT_NAME) {
+    return component[exportName];
+  }
 
   return component?.Default || component?.default || component;
 }

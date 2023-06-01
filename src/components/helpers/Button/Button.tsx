@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import React, { MouseEventHandler, Ref } from 'react';
+import React, { MouseEventHandler, ReactElement, Ref } from 'react';
 import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
 
@@ -15,6 +17,8 @@ export const BUTTON_TYPES = [
   'errorwhite',
   'success',
   'warning',
+  'foobar',
+  undefined,
 ];
 
 interface Props {
@@ -32,7 +36,16 @@ interface Props {
   type: string;
 }
 
-type NativeAttrs = Omit<React.ButtonHTMLAttributes<any>, keyof Props>;
+type NativeAttrs = Omit<React.ButtonHTMLAttributes<undefined>, keyof Props>;
+
+type Variants =
+  | 'default'
+  | 'secondary'
+  | 'errorblack'
+  | 'errorwhite'
+  | 'success'
+  | 'warning'
+  | undefined;
 
 export type ButtonProps = Props & NativeAttrs;
 
@@ -99,12 +112,12 @@ const Button = ({
   id,
   label,
   loading = false,
-  onClick = () => {},
+  onClick = (): void => {},
   ref,
   tag = 'button',
   title,
   type = 'default',
-}: ButtonProps) => {
+}: ButtonProps): ReactElement => {
   const { text } = buttonSlots();
   const children = (
     <>
@@ -116,7 +129,8 @@ const Button = ({
       </div>
     </>
   );
-  const className = buttonVariants({ minWidth: !auto, type });
+
+  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
 
   return React.createElement(
     tag,

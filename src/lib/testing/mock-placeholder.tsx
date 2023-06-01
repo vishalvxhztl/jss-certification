@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentFactory } from '@sitecore-jss/sitecore-jss-nextjs';
-import classnames from 'classnames';
-import { ContainedBy } from '../component-props';
+import clsx from 'clsx';
+// import { ContainedBy } from '../component-props';
 
 const SAMPLE_COMPONENT_NAME = 'StorybookPlaceholderContent';
 
@@ -54,9 +54,11 @@ export const getSampleRenderingContext = (
   return context;
 };
 
-const SamplePlaceholderComponent = ({ containedBy }: ContainedBy): JSX.Element => (
+/* "any" should be "ContainedBy", however "ContainedBy" is not currently an export of "../component-props". */
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+const SamplePlaceholderComponent = ({ containedBy }: any): JSX.Element => (
   <div
-    className={classnames(
+    className={clsx(
       'theme-inverted',
       'bg-theme-bg',
       'text-theme-text',

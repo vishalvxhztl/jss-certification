@@ -10,7 +10,7 @@ const iconOptions = Object.keys(fas)
   .map((key) => fas[key].iconName)
   .sort();
 
-const meta: Meta<typeof Text> = {
+const meta: Meta<typeof Button> = {
   argTypes: {
     auto: {
       control: 'boolean',
