@@ -9,12 +9,12 @@ type ThemeTuple = typeof ALL_THEMES;
 export type ThemeName = ThemeTuple[number];
 
 export type ThemeFile = {
-  [key in ThemeName]: any;
+  [key in ThemeName]: undefined;
 };
 
 export const ThemeContext = createContext<ThemeName>('Primary');
 
-export const useTheme = (themeFile?: ThemeFile) => {
+export const useTheme = (themeFile?: ThemeFile): Record<string, unknown> => {
   const themeName = useContext(ThemeContext);
   const themeData = themeFile ? themeFile[themeName] : undefined;
   return { themeName, themeData };
