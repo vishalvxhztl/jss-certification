@@ -9,7 +9,11 @@ import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 
 // Local
 import '../src/assets/styles/global.css';
-import { componentGlobalWrapper, componentThemeWrapper } from './decorators';
+import {
+  componentFlagSmithWrapper,
+  componentGlobalWrapper,
+  componentThemeWrapper,
+} from './decorators';
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -48,6 +52,10 @@ const preview: Preview = {
   },
 };
 
-export const decorators = [componentGlobalWrapper, componentThemeWrapper];
+export const decorators = [
+  componentFlagSmithWrapper,
+  componentGlobalWrapper,
+  componentThemeWrapper,
+];
 
 export default preview;

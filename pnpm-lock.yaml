@@ -56,6 +56,7 @@ specifiers:
   eslint-config-prettier: ^6.15.0
   eslint-plugin-prettier: ^3.1.4
   eslint-plugin-yaml: ^0.2.0
+  flagsmith: ^3.18.3
   font-awesome: ^4.7.0
   graphql: ~15.8.0
   graphql-let: ^0.16.2
@@ -102,6 +103,7 @@ dependencies:
   bootstrap: 5.3.0
   clsx: 1.2.1
   css-loader: 6.8.1
+  flagsmith: 3.18.3
   font-awesome: 4.7.0
   graphql: 15.8.0
   graphql-tag: 2.12.6_graphql@15.8.0
@@ -9289,6 +9291,10 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
     dev: true
+
+  /flagsmith/3.18.3:
+    resolution: {integrity: sha512-ja+Gd0nSSBSsUSvLG4/91tYI8bm1NZSDY0YkyVREl1E6L4p/bYNk1AYuuPTu4kr4cg9VjbggWIYw3Zq5dWFABA==}
+    dev: false
 
   /flat-cache/3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}

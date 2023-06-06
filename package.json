@@ -45,6 +45,7 @@
     "bootstrap": "^5.1.3",
     "clsx": "^1.2.1",
     "css-loader": "^6.7.4",
+    "flagsmith": "^3.18.3",
     "font-awesome": "^4.7.0",
     "graphql": "~15.8.0",
     "graphql-tag": "^2.11.0",
