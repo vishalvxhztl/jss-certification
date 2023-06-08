@@ -1,5 +1,6 @@
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { useFlags } from 'flagsmith/react';
 import React, { MouseEventHandler, ReactElement, Ref } from 'react';
 import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
@@ -117,18 +118,23 @@ const Button = ({
   type = 'default',
 }: ButtonProps): ReactElement => {
   const { text } = buttonSlots();
+
+  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
+
+  const flags = useFlags(['button_icons']);
+
   const children = (
     <>
       <div className={text()}>
-        {iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
-        {loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
+        {flags.button_icons.enabled && iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
+        {flags.button_icons.enabled && loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
         {label && !loading && label}
-        {iconRight && <FontAwesomeIcon icon={iconRight as IconProp} />}
+        {flags.button_icons.enabled && iconRight && (
+          <FontAwesomeIcon icon={iconRight as IconProp} />
+        )}
       </div>
     </>
   );
-
-  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
 
   return React.createElement(
     tag,
