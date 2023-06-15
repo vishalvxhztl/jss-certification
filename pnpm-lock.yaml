@@ -40,6 +40,7 @@ specifiers:
   '@types/react-dom': ^18.0.5
   '@typescript-eslint/eslint-plugin': '5'
   '@typescript-eslint/parser': ^5
+  '@vercel/edge-config': ^0.2.1
   autoprefixer: ^10.4.13
   axios: ^0.21.1
   babel-plugin-macros: ^3.1.0
@@ -56,7 +57,6 @@ specifiers:
   eslint-config-prettier: ^6.15.0
   eslint-plugin-prettier: ^3.1.4
   eslint-plugin-yaml: ^0.2.0
-  flagsmith: ^3.18.3
   font-awesome: ^4.7.0
   graphql: ~15.8.0
   graphql-let: ^0.16.2
@@ -99,11 +99,11 @@ dependencies:
   '@hedgedoc/html-to-react': 2.0.0_react@18.2.0
   '@material-icons/svg': 1.0.33
   '@sitecore-jss/sitecore-jss-nextjs': 21.1.6_qpq25iykeg5jxwdynhzatkqyee
+  '@vercel/edge-config': 0.2.1
   babel-plugin-macros: 3.1.0
   bootstrap: 5.3.0
   clsx: 1.2.1
   css-loader: 6.8.1
-  flagsmith: 3.18.3
   font-awesome: 4.7.0
   graphql: 15.8.0
   graphql-tag: 2.12.6_graphql@15.8.0
@@ -6023,6 +6023,17 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
+  /@vercel/edge-config-fs/0.1.0:
+    resolution: {integrity: sha512-NRIBwfcS0bUoUbRWlNGetqjvLSwgYH/BqKqDN7vK1g32p7dN96k0712COgaz6VFizAm9b0g6IG6hR6+hc0KCPg==}
+    dev: false
+
+  /@vercel/edge-config/0.2.1:
+    resolution: {integrity: sha512-847kYqJEbga4PGgNrctQ9XsD+2Kw/S+UjzZnIFpebQ9VbdtB0MX4anq33WetcYZYPfhZd2L0uXVnY/BcjI5dOw==}
+    engines: {node: '>=14.6'}
+    dependencies:
+      '@vercel/edge-config-fs': 0.1.0
+    dev: false
+
   /@webassemblyjs/ast/1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}
     dependencies:
@@ -9291,10 +9302,6 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
     dev: true
-
-  /flagsmith/3.18.3:
-    resolution: {integrity: sha512-ja+Gd0nSSBSsUSvLG4/91tYI8bm1NZSDY0YkyVREl1E6L4p/bYNk1AYuuPTu4kr4cg9VjbggWIYw3Zq5dWFABA==}
-    dev: false
 
   /flat-cache/3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}

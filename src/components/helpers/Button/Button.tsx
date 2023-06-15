@@ -1,7 +1,7 @@
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { useFlags } from 'flagsmith/react';
-import React, { MouseEventHandler, ReactElement, Ref } from 'react';
+import { get } from '@vercel/edge-config';
+import React, { MouseEventHandler, ReactElement, Ref, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { tv } from 'tailwind-variants';
 
@@ -117,21 +117,25 @@ const Button = ({
   title,
   type = 'default',
 }: ButtonProps): ReactElement => {
+  const [showIcons, setShowIcons] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      setShowIcons(await get('button_icons'));
+    })();
+  }, []);
+
   const { text } = buttonSlots();
 
   const className = buttonVariants({ minWidth: !auto, type: type as Variants });
 
-  const flags = useFlags(['button_icons']);
-
   const children = (
     <>
       <div className={text()}>
-        {flags.button_icons.enabled && iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
-        {flags.button_icons.enabled && loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
+        {showIcons && iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
+        {showIcons && loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
         {label && !loading && label}
-        {flags.button_icons.enabled && iconRight && (
-          <FontAwesomeIcon icon={iconRight as IconProp} />
-        )}
+        {showIcons && iconRight && <FontAwesomeIcon icon={iconRight as IconProp} />}
       </div>
     </>
   );
