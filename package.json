@@ -115,6 +115,7 @@
     "sass": "^1.52.3",
     "sass-alias": "^1.0.5",
     "storybook": "^7.0.17",
+    "storybook-addon-mock": "^4.0.0",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-order": "^6.0.3",

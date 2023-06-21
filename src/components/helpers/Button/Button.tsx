@@ -1,12 +1,12 @@
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import { get } from '@vercel/edge-config';
-import React, { MouseEventHandler, ReactElement, Ref, useEffect, useState } from 'react';
 import clsx from 'clsx';
+import React, { MouseEventHandler, ReactElement, Ref, useEffect, useState } from 'react';
 import { tv } from 'tailwind-variants';
 
 // Local
 import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
+import { useFeatureFlags } from 'components/hooks/useFeatureFlags';
 
 export const BUTTON_TYPES = [
   'default',
@@ -117,16 +117,11 @@ const Button = ({
   title,
   type = 'default',
 }: ButtonProps): ReactElement => {
-  const [showIcons, setShowIcons] = useState(false);
+  const [showIcons, setShowIcons] = useState<boolean | undefined>(true);
 
-  useEffect(() => {
-    (async () => {
-      setShowIcons(await get('button_icons'));
-    })();
-  }, []);
+  const { getFeatureFlag } = useFeatureFlags();
 
   const { text } = buttonSlots();
-
   const className = buttonVariants({ minWidth: !auto, type: type as Variants });
 
   const children = (
@@ -139,6 +134,10 @@ const Button = ({
       </div>
     </>
   );
+
+  useEffect(() => {
+    setShowIcons(getFeatureFlag('buttonIcons'));
+  }, [getFeatureFlag]);
 
   return React.createElement(
     tag,
