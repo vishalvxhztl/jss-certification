@@ -15,9 +15,9 @@ specifiers:
   '@graphql-typed-document-node/core': ^3.1.0
   '@hedgedoc/html-to-react': ^2.0.0
   '@material-icons/svg': ^1.0.33
-  '@sitecore-jss/sitecore-jss-cli': ^21.1.0
-  '@sitecore-jss/sitecore-jss-dev-tools': ^21.1.0
-  '@sitecore-jss/sitecore-jss-nextjs': ^21.1.0
+  '@sitecore-jss/sitecore-jss-cli': ~21.2.0
+  '@sitecore-jss/sitecore-jss-dev-tools': ~21.2.0
+  '@sitecore-jss/sitecore-jss-nextjs': ~21.2.0
   '@storybook/addon-docs': ^7.0.17
   '@storybook/addon-essentials': ^7.0.17
   '@storybook/addon-interactions': ^7.0.17
@@ -97,7 +97,7 @@ dependencies:
   '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
   '@hedgedoc/html-to-react': 2.0.0_react@18.2.0
   '@material-icons/svg': 1.0.33
-  '@sitecore-jss/sitecore-jss-nextjs': 21.1.6_qpq25iykeg5jxwdynhzatkqyee
+  '@sitecore-jss/sitecore-jss-nextjs': 21.2.0_qpq25iykeg5jxwdynhzatkqyee
   babel-plugin-macros: 3.1.0
   bootstrap: 5.3.0
   clsx: 1.2.1
@@ -121,8 +121,8 @@ devDependencies:
   '@graphql-codegen/typescript-operations': 1.18.4_graphql@15.8.0
   '@graphql-codegen/typescript-resolvers': 1.20.0_graphql@15.8.0
   '@graphql-typed-document-node/core': 3.2.0_graphql@15.8.0
-  '@sitecore-jss/sitecore-jss-cli': 21.1.6_haicren4phfcx6dckkdidh3s3e
-  '@sitecore-jss/sitecore-jss-dev-tools': 21.1.6_haicren4phfcx6dckkdidh3s3e
+  '@sitecore-jss/sitecore-jss-cli': 21.2.0_haicren4phfcx6dckkdidh3s3e
+  '@sitecore-jss/sitecore-jss-dev-tools': 21.2.0_haicren4phfcx6dckkdidh3s3e
   '@storybook/addon-docs': 7.0.18_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-essentials': 7.0.18_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-interactions': 7.0.18_biqbaboplfbrettd7655fr4n2y
@@ -4160,12 +4160,20 @@ packages:
       '@sinonjs/commons': 1.8.6
     dev: true
 
-  /@sitecore-jss/sitecore-jss-cli/21.1.6_haicren4phfcx6dckkdidh3s3e:
-    resolution: {integrity: sha512-r7jpzwTXfVX2dr1IUoNbPLk9cjR4TwgM2qhTq9xu1griYbb8Fj8y1bmPsCpACLgqwOV5EFZTFBYXVpniLVfhow==}
+  /@sitecore-feaas/clientside/0.3.2_react-dom@18.2.0:
+    resolution: {integrity: sha512-viaDZcYl3DOlmYAAcdvtCdZVndexL4LyqAPKlPByfs9zm8iWAR1F29xpl91T8FcdzyR4HIlSEOw7N2FRn44Mpg==}
+    peerDependencies:
+      react-dom: '>=16.8.0'
+    dependencies:
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@sitecore-jss/sitecore-jss-cli/21.2.0_haicren4phfcx6dckkdidh3s3e:
+    resolution: {integrity: sha512-qZGVImnlAs1IEwrITuvEUlRCzmplCbFqsEzhPkd/iA14TDR0exm2pPYnlp6jv5qLeVBCAiPZDhZqYqV2AP0uhA==}
     engines: {node: '>=12', npm: '>=6'}
     hasBin: true
     dependencies:
-      '@sitecore-jss/sitecore-jss-dev-tools': 21.1.6_haicren4phfcx6dckkdidh3s3e
+      '@sitecore-jss/sitecore-jss-dev-tools': 21.2.0_haicren4phfcx6dckkdidh3s3e
       chalk: 4.1.2
       cross-spawn: 7.0.3
       dotenv: 16.1.0
@@ -4184,12 +4192,12 @@ packages:
       - typescript
     dev: true
 
-  /@sitecore-jss/sitecore-jss-dev-tools/21.1.6_haicren4phfcx6dckkdidh3s3e:
-    resolution: {integrity: sha512-w217eKmdOTxVSq2pJCzefXRxAZZUxBR1XZTve44QS+bAT1uGQw3wBsIkindVAlT7b0DMUiHN+u3ByONTCpMnhg==}
+  /@sitecore-jss/sitecore-jss-dev-tools/21.2.0_haicren4phfcx6dckkdidh3s3e:
+    resolution: {integrity: sha512-dw0pmw/G/cYTU5GQxNuaBvjYpgiuZxJMcplK9zaOjJ0XlwOec8Zz0K1QJg+igVU1L8r9YUgQsk2tJ/nnZ68ZXA==}
     engines: {node: '>=12', npm: '>=6'}
     hasBin: true
     dependencies:
-      '@sitecore-jss/sitecore-jss': 21.1.6
+      '@sitecore-jss/sitecore-jss': 21.2.0
       axios: 1.4.0
       chalk: 4.1.2
       chokidar: 3.5.3
@@ -4202,7 +4210,7 @@ packages:
       joi: 17.9.2
       js-yaml: 4.1.0
       jszip: 3.10.1
-      module-alias: 2.2.2
+      module-alias: 2.2.3
       readline-sync: 1.4.10
       resolve: 1.22.2
       ts-node: 10.9.1_haicren4phfcx6dckkdidh3s3e
@@ -4218,17 +4226,17 @@ packages:
       - supports-color
       - typescript
 
-  /@sitecore-jss/sitecore-jss-nextjs/21.1.6_qpq25iykeg5jxwdynhzatkqyee:
-    resolution: {integrity: sha512-T/qDyLLFvw/fegGlI9+41FQ22fZz/CFOrf1hKqh5EH0el/qQ1Z7qUSyJpN7UvHPLlX1Oop1tjvfie41mRnzeJw==}
+  /@sitecore-jss/sitecore-jss-nextjs/21.2.0_qpq25iykeg5jxwdynhzatkqyee:
+    resolution: {integrity: sha512-WjU8ZbWW0Zr+6mTJ1NbhdjJgeb7PUD+Lz+Zc2Fay9SrFY17Gy7jv+jnL5xF2BaxGSQJNhF9tO9O2ahcfQwRgNw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       next: ^13.1.6
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@sitecore-jss/sitecore-jss': 21.1.6
-      '@sitecore-jss/sitecore-jss-dev-tools': 21.1.6_haicren4phfcx6dckkdidh3s3e
-      '@sitecore-jss/sitecore-jss-react': 21.1.6_biqbaboplfbrettd7655fr4n2y
+      '@sitecore-jss/sitecore-jss': 21.2.0
+      '@sitecore-jss/sitecore-jss-dev-tools': 21.2.0_haicren4phfcx6dckkdidh3s3e
+      '@sitecore-jss/sitecore-jss-react': 21.2.0_biqbaboplfbrettd7655fr4n2y
       next: 13.4.4_spon4kqzgcbudqd3euug5alfpm
       node-html-parser: 6.1.5
       prop-types: 15.8.1
@@ -4246,16 +4254,16 @@ packages:
       - typescript
     dev: false
 
-  /@sitecore-jss/sitecore-jss-react/21.1.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-nWvvn0HW6bjhXJwyKelG94sywIaO37wwrcz4SeQUvardS9mS4j3mwiGeQ5o64I3Smro4jnG+soohn+XgR0BIGw==}
+  /@sitecore-jss/sitecore-jss-react/21.2.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-X5iye5au2DZh2Birm4/MEkXa9KzUUnPPgSc8Tpcvpb1/Z6+xgjjdLOPG3bssJyLmBPIWBcHAz075f115qHib8w==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      '@sitecore-jss/sitecore-jss': 21.1.6
+      '@sitecore-feaas/clientside': 0.3.2_react-dom@18.2.0
+      '@sitecore-jss/sitecore-jss': 21.2.0
       deep-equal: 2.2.1
-      html-react-parser: 3.0.16_react@18.2.0
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -4265,15 +4273,15 @@ packages:
       - supports-color
     dev: false
 
-  /@sitecore-jss/sitecore-jss/21.1.6:
-    resolution: {integrity: sha512-Ok8rwjGbaV3k0qqo9cybQMOj+4QAB3gm/6Ii1BQ8+IGuC/kpHR/JSVHQiistgDTqaJMZIGfTIaPnUhkxTdM3kw==}
+  /@sitecore-jss/sitecore-jss/21.2.0:
+    resolution: {integrity: sha512-6w5OW42N2Humz7N7nr5R9fXDM7LgJuZJusj/STfdtuQi7Wsj5zdihQAMnyK1pWC2xuDgj5pq44qvNbE4uudVXA==}
     engines: {node: '>=12', npm: '>=6'}
     dependencies:
       axios: 0.21.4_debug@4.3.4
       chalk: 4.1.2
       debug: 4.3.4
-      graphql: 16.6.0
-      graphql-request: 4.3.0_graphql@16.6.0
+      graphql: 16.7.1
+      graphql-request: 4.3.0_graphql@16.7.1
       lodash.unescape: 4.0.1
       memory-cache: 0.2.0
       url-parse: 1.5.10
@@ -6170,12 +6178,12 @@ packages:
       acorn-walk: 7.2.0
     dev: true
 
-  /acorn-import-assertions/1.9.0_acorn@8.8.2:
+  /acorn-import-assertions/1.9.0_acorn@8.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
     peerDependencies:
       acorn: ^8
     dependencies:
-      acorn: 8.8.2
+      acorn: 8.9.0
     dev: true
 
   /acorn-jsx/5.3.2_acorn@7.4.1:
@@ -6203,6 +6211,12 @@ packages:
 
   /acorn/8.8.2:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  /acorn/8.9.0:
+    resolution: {integrity: sha512-jaVNAFBHNLXspO543WnNNPZFRtavh3skAkITqD0/2aeMkKZTN+254PyhwxFYrk3vQ1xfY+2wbesJMs/JC8/PwQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -9798,7 +9812,7 @@ packages:
       - encoding
     dev: true
 
-  /graphql-request/4.3.0_graphql@16.6.0:
+  /graphql-request/4.3.0_graphql@16.7.1:
     resolution: {integrity: sha512-2v6hQViJvSsifK606AliqiNiijb1uwWp6Re7o0RTyH+uRTv/u7Uqm2g4Fjq/LgZIzARB38RZEvVBFOQOVdlBow==}
     peerDependencies:
       graphql: 14 - 16
@@ -9806,7 +9820,7 @@ packages:
       cross-fetch: 3.1.6
       extract-files: 9.0.0
       form-data: 3.0.1
-      graphql: 16.6.0
+      graphql: 16.7.1
     transitivePeerDependencies:
       - encoding
 
@@ -9832,8 +9846,8 @@ packages:
     resolution: {integrity: sha512-5gghUc24tP9HRznNpV2+FIoq3xKkj5dTQqf4v0CpdPbFVwFkWoxOM+o+2OC9ZSvjEMTjfmG9QT+gcvggTwW1zw==}
     engines: {node: '>= 10.x'}
 
-  /graphql/16.6.0:
-    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+  /graphql/16.7.1:
+    resolution: {integrity: sha512-DRYR9tf+UGU0KOsMcKAlXeFfX89UiiIZ0dRU3mR0yJfu6OjZqUcp68NnFLnqQU5RexygFoDy1EW+ccOYcPfmHg==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   /gunzip-maybe/1.4.2:
@@ -9965,13 +9979,6 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
-  /html-dom-parser/3.1.7:
-    resolution: {integrity: sha512-cDgNF4YgF6J3H+d9mcldGL19p0GzVdS3iGuDNzYWQpU47q3+IRM85X3Xo07E+nntF4ek4s78A9V24EwxlPTjig==}
-    dependencies:
-      domhandler: 5.0.3
-      htmlparser2: 8.0.2
-    dev: false
-
   /html-encoding-sniffer/3.0.0:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
     engines: {node: '>=12'}
@@ -10000,18 +10007,6 @@ packages:
       relateurl: 0.2.7
       terser: 5.17.6
     dev: true
-
-  /html-react-parser/3.0.16_react@18.2.0:
-    resolution: {integrity: sha512-ysQZtRFPcg+McVb4B05oNWSnqM14zagpvTgGcI5e1/BvCl38YwzWzKibrbBmXeemg70olN1bAoeixo7o06G5Eg==}
-    peerDependencies:
-      react: 0.14 || 15 || 16 || 17 || 18
-    dependencies:
-      domhandler: 5.0.3
-      html-dom-parser: 3.1.7
-      react: 18.2.0
-      react-property: 2.0.0
-      style-to-js: 1.1.3
-    dev: false
 
   /html-tags/3.3.1:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
@@ -10050,15 +10045,6 @@ packages:
       domutils: 2.8.0
       entities: 2.2.0
     dev: true
-
-  /htmlparser2/8.0.2:
-    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.1.0
-      entities: 4.5.0
-    dev: false
 
   /htmlparser2/9.0.0:
     resolution: {integrity: sha512-uxbSI98wmFT/G4P2zXx4OVx04qWUmyFPrD2/CNepa2Zo3GPNaCaaxElDgwUrwYWkK1nr9fft0Ya8dws8coDLLQ==}
@@ -10252,10 +10238,6 @@ packages:
   /ini/1.3.8:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
     dev: true
-
-  /inline-style-parser/0.1.1:
-    resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
-    dev: false
 
   /inquirer/7.3.3:
     resolution: {integrity: sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==}
@@ -12459,8 +12441,8 @@ packages:
     hasBin: true
     dev: true
 
-  /module-alias/2.2.2:
-    resolution: {integrity: sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==}
+  /module-alias/2.2.3:
+    resolution: {integrity: sha512-23g5BFj4zdQL/b6tor7Ji+QY4pEfNH784BMslY9Qb0UnJWRAt+lQGLYmRaM0KDBwIG23ffEBELhZDP2rhi9f/Q==}
 
   /mri/1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -13693,10 +13675,6 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
-  /react-property/2.0.0:
-    resolution: {integrity: sha512-kzmNjIgU32mO4mmH5+iUyrqlpFQhF8K2k7eZ4fdLSOPFrD1XgEuSBv9LDEgxRXTMBqMd8ppT0x6TIzqE5pdGdw==}
-    dev: false
-
   /react-refresh/0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
@@ -14729,18 +14707,6 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
-  /style-to-js/1.1.3:
-    resolution: {integrity: sha512-zKI5gN/zb7LS/Vm0eUwjmjrXWw8IMtyA8aPBJZdYiQTXj4+wQ3IucOLIOnF7zCHxvW8UhIGh/uZh/t9zEHXNTQ==}
-    dependencies:
-      style-to-object: 0.4.1
-    dev: false
-
-  /style-to-object/0.4.1:
-    resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==}
-    dependencies:
-      inline-style-parser: 0.1.1
-    dev: false
-
   /styled-jsx/5.1.1_smkomt7xyt5ilack6abtzpwrzm:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
@@ -15135,7 +15101,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.3
-      acorn: 8.8.2
+      acorn: 8.9.0
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -15289,7 +15255,7 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 14.18.48
-      acorn: 8.8.2
+      acorn: 8.9.0
       acorn-walk: 8.2.0
       arg: 4.1.3
       create-require: 1.1.1
@@ -15609,7 +15575,7 @@ packages:
   /unplugin/0.10.2:
     resolution: {integrity: sha512-6rk7GUa4ICYjae5PrAllvcDeuT8pA9+j5J5EkxbMFaV+SalHhxZ7X2dohMzu6C3XzsMT+6jwR/+pwPNR3uK9MA==}
     dependencies:
-      acorn: 8.8.2
+      acorn: 8.9.0
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.6
@@ -15871,8 +15837,8 @@ packages:
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6
-      acorn: 8.8.2
-      acorn-import-assertions: 1.9.0_acorn@8.8.2
+      acorn: 8.9.0
+      acorn-import-assertions: 1.9.0_acorn@8.9.0
       browserslist: 4.21.7
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.14.1
