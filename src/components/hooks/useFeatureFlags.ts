@@ -4,13 +4,14 @@ import { useCallback, useEffect, useState } from 'react';
 // Local
 import type { FeatureFlags } from 'lib/feature-flags';
 
-export function useFeatureFlags() {
+const useFeatureFlags = () => {
   const [featureFlags, setFeatureFlags] = useState<FeatureFlags>({});
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('/api/feature-flags?flag=buttonIcons');
+      const res = await fetch('/api/feature-flags');
       const resData = await res.json();
+      console.log(resData);
 
       setFeatureFlags(resData);
     })();
@@ -25,4 +26,6 @@ export function useFeatureFlags() {
     featureFlags,
     getFeatureFlag,
   };
-}
+};
+
+export default useFeatureFlags;

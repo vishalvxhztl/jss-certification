@@ -6,7 +6,7 @@ import { tv } from 'tailwind-variants';
 
 // Local
 import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
-import { useFeatureFlags } from 'components/hooks/useFeatureFlags';
+import useFeatureFlags from 'components/hooks/useFeatureFlags';
 
 export const BUTTON_TYPES = [
   'default',

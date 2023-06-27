@@ -73,7 +73,7 @@ const meta: Meta<typeof Button> = {
         method: 'GET',
         response: { buttonIcons: true, maintenanceMode: false },
         status: 200,
-        url: '/api/feature-flags?flag=:flag',
+        url: '/api/feature-flags',
       },
     ],
   },
