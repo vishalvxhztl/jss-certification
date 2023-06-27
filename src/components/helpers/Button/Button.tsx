@@ -1,11 +1,12 @@
 // Global
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import React, { MouseEventHandler, ReactElement, Ref } from 'react';
 import clsx from 'clsx';
+import React, { MouseEventHandler, ReactElement, Ref, useEffect, useState } from 'react';
 import { tv } from 'tailwind-variants';
 
 // Local
 import FontAwesomeIcon from 'components/helpers/FontAwesomeIcon/FontAwesomeIcon';
+import useFeatureFlags from 'components/hooks/useFeatureFlags';
 
 export const BUTTON_TYPES = [
   'default',
@@ -116,19 +117,27 @@ const Button = ({
   title,
   type = 'default',
 }: ButtonProps): ReactElement => {
+  const [showIcons, setShowIcons] = useState<boolean | undefined>(true);
+
+  const { getFeatureFlag } = useFeatureFlags();
+
   const { text } = buttonSlots();
+  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
+
   const children = (
     <>
       <div className={text()}>
-        {iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
-        {loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
+        {showIcons && iconLeft && <FontAwesomeIcon icon={iconLeft as IconProp} />}
+        {showIcons && loading && <FontAwesomeIcon icon={'spinner'} spinPulse />}
         {label && !loading && label}
-        {iconRight && <FontAwesomeIcon icon={iconRight as IconProp} />}
+        {showIcons && iconRight && <FontAwesomeIcon icon={iconRight as IconProp} />}
       </div>
     </>
   );
 
-  const className = buttonVariants({ minWidth: !auto, type: type as Variants });
+  useEffect(() => {
+    setShowIcons(getFeatureFlag('buttonIcons'));
+  }, [getFeatureFlag]);
 
   return React.createElement(
     tag,

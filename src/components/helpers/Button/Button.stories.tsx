@@ -67,6 +67,16 @@ const meta: Meta<typeof Button> = {
     },
   },
   component: Button,
+  parameters: {
+    mockData: [
+      {
+        method: 'GET',
+        response: { buttonIcons: true, maintenanceMode: false },
+        status: 200,
+        url: '/api/feature-flags',
+      },
+    ],
+  },
   tags: ['autodocs'],
   title: 'Helpers/General/Button',
 };
