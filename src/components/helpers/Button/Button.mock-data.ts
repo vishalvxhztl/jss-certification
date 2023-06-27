@@ -18,7 +18,7 @@ export const disabled = {
 
 export const iconLeft = {
   ...defaultData,
-  iconLeft: 'faCalendarAlt',
+  iconLeft: 'calendar',
   label: 'Button',
 };
 
@@ -31,7 +31,7 @@ export const iconOnly = {
 
 export const iconRight = {
   ...defaultData,
-  iconRight: 'faCalendarAlt',
+  iconRight: 'calendar',
   label: 'Button',
 };
 

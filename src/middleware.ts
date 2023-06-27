@@ -1,8 +1,20 @@
+// Global
 import type { NextRequest, NextFetchEvent } from 'next/server';
+import { NextResponse } from 'next/server';
+import { get } from '@vercel/edge-config';
+
+// Local
 import middleware from 'lib/middleware';
 
 // eslint-disable-next-line
 export default async function (req: NextRequest, ev: NextFetchEvent) {
+  const maintenanceMode = await get('maintenanceMode');
+  if (maintenanceMode === true) {
+    req.nextUrl.pathname = `/html/maintenance.html`;
+
+    return NextResponse.rewrite(req.nextUrl);
+  }
+
   return middleware(req, ev);
 }
 
@@ -15,5 +27,5 @@ export const config = {
    * 4. /- (Sitecore media)
    * 5. all root files inside /public (e.g. /favicon.ico)
    */
-  matcher: ['/', '/((?!api/|_next/|sitecore/api/|-/|[\\w-]+\\.\\w+).*)'],
+  matcher: ['/', '/((?!api/|public/|_next/|sitecore/api/|-/|[\\w-]+\\.\\w+).*)'],
 };
