@@ -2,7 +2,6 @@
 import { DocsContainer, DocsContainerProps } from '@storybook/blocks';
 import type { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
-console.log(themes);
 
 // Lib
 import { ALL_THEMES } from '../src/lib/context/ThemeContext';
@@ -10,6 +9,8 @@ import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 // Local
 import '../src/assets/styles/global.css';
 import { componentGlobalWrapper, componentThemeWrapper } from './decorators';
+
+const projectThemes = require('../src/theme');
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -21,7 +22,7 @@ const preview: Preview = {
     theme: {
       name: 'Theme',
       description: 'Global theme for components',
-      defaultValue: 'Primary',
+      defaultValue: projectThemes.default.default.name,
       toolbar: {
         icon: 'paintbrush',
         items: ALL_THEMES,

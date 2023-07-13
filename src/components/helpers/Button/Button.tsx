@@ -12,11 +12,9 @@ export const BUTTON_TYPES = [
   'default',
   'secondary',
   'abort',
-  'errorblack',
-  'errorwhite',
+  'error',
   'success',
   'warning',
-  'foobar',
   undefined,
 ];
 
@@ -37,14 +35,7 @@ interface Props {
 
 type NativeAttrs = Omit<React.ButtonHTMLAttributes<undefined>, keyof Props>;
 
-type Variants =
-  | 'default'
-  | 'secondary'
-  | 'errorblack'
-  | 'errorwhite'
-  | 'success'
-  | 'warning'
-  | undefined;
+type Variants = 'default' | 'secondary' | 'error' | 'success' | 'warning' | undefined;
 
 export type ButtonProps = Props & NativeAttrs;
 
@@ -85,17 +76,12 @@ const buttonVariants = tv({
   },
   variants: {
     type: {
-      default: clsx(
-        'bg-primary',
-        'hover:text-theme-btn-primary-text/50',
-        'text-theme-btn-primary-text'
-      ),
-      secondary: clsx('bg-rose-dark', 'hover:text-white/50', 'text-white'),
-      abort: clsx('bg-salmon'),
-      errorblack: clsx('bg-error-black', 'hover:text-white/50', 'text-white'),
-      errorwhite: clsx('bg-error-white', 'hover:text-white/50', 'text-white'),
-      success: clsx('bg-beige', 'hover:text-black/50', 'text-black'),
-      warning: clsx('bg-orange', 'hover:text-white/50', 'text-white'),
+      default: clsx('bg-brand-primary', 'hover:text-white/50', 'text-white'),
+      secondary: clsx('bg-brand-secondary', 'hover:text-white/50', 'text-white'),
+      abort: clsx('bg-pink-200'),
+      error: clsx('bg-red-500', 'hover:text-white/50', 'text-white'),
+      success: clsx('bg-green-700', 'hover:text-black/50', 'text-black'),
+      warning: clsx('bg-orange-500', 'hover:text-white/50', 'text-white'),
     },
     minWidth: {
       true: clsx('min-w-[10rem]'),

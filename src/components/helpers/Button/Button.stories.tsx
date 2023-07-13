@@ -63,7 +63,7 @@ const meta: Meta<typeof Button> = {
       control: 'select',
       defaultValue: 'default',
       description: 'The display state of the button.',
-      options: BUTTON_TYPES,
+      options: BUTTON_TYPES.filter((el) => el !== undefined),
     },
   },
   component: Button,

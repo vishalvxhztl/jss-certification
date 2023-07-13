@@ -1,6 +1,12 @@
-const COLORS = require('./constants');
+// Global
+const defaultTheme = require('tailwindcss/defaultTheme');
 
-module.exports = {
+// Local
+import { objectMap } from '../lib/theme-utils';
+
+import TOKENS from './tokens.base.json';
+
+const theme = {
   name: 'Base',
   extend: {
     aspectRatio: {
@@ -11,52 +17,36 @@ module.exports = {
       portrait: '2 / 3',
       square: '1 / 1',
     },
+    borderRadius: {
+      ...objectMap(TOKENS.BorderRadius, (v) => v.value),
+    },
     borderWidth: {
-      DEFAULT: '1px',
-      0: '0',
-      2: '2px',
-      3: '3px',
-      4: '4px',
-      6: '6px',
-      8: '8px',
+      ...objectMap(TOKENS.BorderWidth, (v) => v.value),
     },
     colors: {
-      ...COLORS,
-      'theme-btn-primary-text': COLORS.black,
-    },
-    extend: {
-      gap: {
-        s: '1rem',
+      brand: {
+        ...objectMap(TOKENS['Brand Colors'].Brand, (v) => v.value),
+      },
+      scale: {
+        ...objectMap(TOKENS['Brand Colors'].Scale, (v) => v.value),
       },
     },
-    objectPosition: {
-      bottom: 'bottom',
-      left: 'left',
-      right: 'right',
-      top: 'top',
-      'left-bottom': 'left bottom',
-      'right-bottom': 'right bottom',
-      'left-top': 'left top',
-      'right-top': 'right top',
+    fontFamily: {
+      ...objectMap(TOKENS.fontFamilies, (v) => [v.value]),
+    },
+    lineHeight: {
+      ...objectMap(TOKENS.lineHeights, (v) => v.value),
     },
     screens: {
-      xl: '1440px',
-      lg: '1200px',
-      ml: '960px',
-      md: '672px',
-      sm: '375px',
+      '2xl': '1536px',
     },
-    spacing: {
-      xxl: '7.5rem',
-      xl: '5rem',
-      l: '2.5rem',
-      ml: '2rem',
-      m: '1.5rem',
-      s: '1rem',
-      xs: '0.75rem',
-      xxs: '0.5rem',
-      xxxs: '0.25rem',
-      0: '0px',
+    body: {
+      large: {
+        fontFamily: ['Roboto'],
+        fontSize: '8px',
+      },
     },
   },
 };
+
+export default theme;

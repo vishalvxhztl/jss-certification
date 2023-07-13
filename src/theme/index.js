@@ -1,10 +1,13 @@
-const base = require('./tailwind.base');
-const primary = require('./tailwind.primary');
-const secondary = require('./tailwind.secondary');
+import base from './tailwind.base';
+import brandA from './tailwind.brand-a';
+import brandZ from './tailwind.brand-z';
 
-module.exports = {
+const themes = {
   Base: base,
-  Primary: primary,
-  Secondary: secondary,
-  themes: [primary, secondary],
+  BrandA: brandA,
+  BrandZ: brandZ,
+  default: base,
+  themes: [brandA, brandZ],
 };
+
+export default themes;

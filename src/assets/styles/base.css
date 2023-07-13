@@ -4,6 +4,7 @@
 
 @layer base {
   html {
+    font-family: 'Proxima Nova', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -35,16 +36,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body:not(.light) {
-    @apply text-gray;
+  body {
+    @apply text-white;
 
     background-color: #1b1c1d;
   }
 }
 @media (prefers-color-scheme: light) {
-  body.dark {
-    @apply text-gray;
-
-    background-color: #1b1c1d;
+  body {
+    background-color: #ffffff;
   }
 }

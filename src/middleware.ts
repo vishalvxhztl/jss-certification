@@ -9,9 +9,9 @@ import middleware from 'lib/middleware';
 // eslint-disable-next-line
 export default async function (req: NextRequest, ev: NextFetchEvent) {
   const maintenanceMode = await get('maintenanceMode');
+
   if (maintenanceMode === true) {
     req.nextUrl.pathname = `/html/maintenance.html`;
-
     return NextResponse.rewrite(req.nextUrl);
   }
 
@@ -23,9 +23,10 @@ export const config = {
    * Match all paths except for:
    * 1. /api routes
    * 2. /_next (Next.js internals)
-   * 3. /sitecore/api (Sitecore API routes)
-   * 4. /- (Sitecore media)
-   * 5. all root files inside /public (e.g. /favicon.ico)
+   * 3. /public routes
+   * 4. /sitecore/api (Sitecore API routes)
+   * 5. /- (Sitecore media)
+   * 6. all root files inside /public (e.g. /favicon.ico)
    */
-  matcher: ['/', '/((?!api/|public/|_next/|sitecore/api/|-/|[\\w-]+\\.\\w+).*)'],
+  matcher: ['/', '/((?!api/|_next/|public/|sitecore/api/|-/|[\\w-]+\\.\\w+).*)'],
 };

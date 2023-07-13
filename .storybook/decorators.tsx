@@ -18,7 +18,7 @@ export const componentGlobalWrapper: Decorator = (Story) => (
 export const componentThemeWrapper: Decorator = (Story, context) => (
   <SitecoreContextReactContext.Provider value={mockSitecoreContext}>
     <div className={context.globals.theme}>
-      <ThemeContext.Provider value={context.globals.themeName}>
+      <ThemeContext.Provider value={context.globals.theme}>
         <Story />
       </ThemeContext.Provider>
     </div>
