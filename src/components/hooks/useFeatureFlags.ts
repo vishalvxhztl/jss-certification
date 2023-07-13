@@ -11,7 +11,6 @@ const useFeatureFlags = () => {
     (async () => {
       const res = await fetch('/api/feature-flags');
       const resData = await res.json();
-      console.log(resData);
 
       setFeatureFlags(resData);
     })();

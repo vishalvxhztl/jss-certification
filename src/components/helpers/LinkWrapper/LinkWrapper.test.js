@@ -2,7 +2,6 @@
 import dynamic from 'next/dynamic';
 
 // Lib
-// import { snapshot, renderComponent, eeSitecoreContext } from 'lib/jest/test-utils';
 import { renderComponent, snapshot } from 'lib/testing/utils';
 
 // Local

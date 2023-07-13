@@ -1,8 +1,13 @@
 // Global
-import { render, fireEvent, waitFor } from '@testing-library/react';
 import { ComponentPropsContext, SitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
+import { render, fireEvent, waitFor } from '@testing-library/react';
+import mockRouter from 'next-router-mock';
+
 // Lib
 import createComponentFactory from './mock-placeholder';
+
+jest.mock('next/router', () => require('next-router-mock'));
+jest.spyOn(global.Date, 'now').mockImplementation(() => new Date(epochMs).valueOf());
 
 export const renderComponent = (
   Component,
@@ -36,8 +41,6 @@ export const hasDataComponent = (component, name) => {
   const nodes = component.baseElement.querySelectorAll(`[data-component="${name}"]`);
   expect(nodes.length).toBe(1);
 };
-
-jest.spyOn(global.Date, 'now').mockImplementation(() => new Date(epochMs).valueOf());
 
 export const testFieldError = async (Component, mockData, { label, value, error }) => {
   const component = renderComponent(Component, mockData);

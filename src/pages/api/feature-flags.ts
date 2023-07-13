@@ -21,5 +21,5 @@ const fetchFeatureFlag = async (req: NextRequest) => {
 export default fetchFeatureFlag;
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };

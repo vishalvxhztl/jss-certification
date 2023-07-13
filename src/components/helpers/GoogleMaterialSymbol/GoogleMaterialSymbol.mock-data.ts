@@ -3,7 +3,7 @@ import { Variant } from './GoogleMaterialSymbol';
 
 const defaultData = {
   className: '',
-  icon: 'cached',
+  icon: 'calendar_month',
   variant: 'round' as Variant,
 };
 

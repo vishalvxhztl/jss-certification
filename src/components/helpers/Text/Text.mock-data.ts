@@ -26,7 +26,7 @@ export const deleted = {
 export const em = {
   className: '',
   tag: 'em',
-  text: 'This is some emhasized text',
+  text: 'This is some emphasized text',
 };
 
 export const heading = {

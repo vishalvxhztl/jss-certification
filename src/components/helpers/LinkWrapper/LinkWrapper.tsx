@@ -18,15 +18,18 @@ export interface LinkWrapperProps extends LinkProps {
 const INTERNAL_LINK_REGEX = /^\/|^\#/g;
 
 const LinkWrapper = React.forwardRef(
-  ({
-    children,
-    field,
-    srOnlyText,
-    suppressLinkText,
-    suppressNewTabIcon,
-    ref,
-    ...props
-  }: LinkWrapperProps): JSX.Element => {
+  (
+    {
+      children,
+      field,
+      srOnlyText,
+      suppressLinkText,
+      suppressNewTabIcon,
+      ref,
+      ...props
+    }: LinkWrapperProps,
+    _ref
+  ): JSX.Element => {
     // Format field as LinkField for consistency
     const asLinkField = !field.value ? { value: { ...field } } : (field as LinkField);
     const text = suppressLinkText ? '' : asLinkField?.value?.text;
