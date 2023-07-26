@@ -18,7 +18,7 @@ export const FaIconsBlock = ({ of }) => {
       <IconGallery>
         {filteredIcons.map((iconName) => (
           <IconItem key={iconName} name={iconName}>
-            <FontAwesomeIcon icon={iconName} />
+            <FontAwesomeIcon color="#000000" icon={iconName} />
           </IconItem>
         ))}
       </IconGallery>

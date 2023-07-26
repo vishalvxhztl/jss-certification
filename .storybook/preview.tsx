@@ -10,6 +10,7 @@ import { ALL_THEMES } from '../src/lib/context/ThemeContext';
 import '../src/assets/styles/global.css';
 import { componentGlobalWrapper, componentThemeWrapper } from './decorators';
 
+// @ts-ignore
 const projectThemes = require('../src/theme');
 
 // Fontawesome
@@ -19,6 +20,9 @@ library.add(fas);
 
 const preview: Preview = {
   globalTypes: {
+    rtlDirection: {
+      defaultValue: false,
+    },
     theme: {
       name: 'Theme',
       description: 'Global theme for components',
@@ -45,6 +49,10 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.light,
+    },
+    rtlDirection: {
+      autoLocales: ['ar'],
+      reload: true,
     },
   },
 };

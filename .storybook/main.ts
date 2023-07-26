@@ -1,5 +1,4 @@
 // Global
-import type from '@storybook/nextjs';
 import { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
@@ -9,6 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     '@storybook/addon-mdx-gfm',
     'storybook-addon-mock',
+    'storybook-addon-rtl-direction',
   ],
   framework: {
     name: '@storybook/nextjs',

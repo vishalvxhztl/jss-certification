@@ -4,7 +4,7 @@ const defaultData = {
   border: false,
   bounce: false,
   className: '',
-  color: '',
+  color: '#000000',
   fade: false,
   fixedWidth: false,
   flip: undefined,
