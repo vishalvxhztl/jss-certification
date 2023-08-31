@@ -1,14 +1,18 @@
 /**
  * This Layout is needed for Starter Kit.
  */
-import React from 'react';
-import Head from 'next/head';
+
+// Global
 import {
   Placeholder,
   getPublicUrl,
   LayoutServiceData,
   Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import Head from 'next/head';
+import React from 'react';
+
+// Local
 import Scripts from 'src/Scripts';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
@@ -37,7 +41,6 @@ const PageLayout = ({ layoutData }: LayoutProps): JSX.Element => {
         <title>{fields?.Title?.value?.toString() || 'Page'}</title>
         <link rel="icon" href={`${publicUrl}/favicon.ico`} />
       </Head>
-
       {/* root placeholder for the app, which we add components to using route data */}
       <div className={mainClassPageEditing}>
         <header>

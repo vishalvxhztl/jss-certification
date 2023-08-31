@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
+// Global
 import { GetStaticPaths, GetStaticProps } from 'next';
-import NotFound from 'components/layout/NotFound';
-import PageLayout from '@/components/layout/PageLayout';
+import { useEffect } from 'react';
 import {
   RenderingType,
   SitecoreContext,
@@ -10,11 +9,15 @@ import {
   EditingComponentPlaceholder,
   StaticPath,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+
+// Local
+import NotFound from '@/components/layout/NotFound';
+import PageLayout from '@/components/layout/PageLayout';
 import { SitecorePageProps } from 'lib/page-props';
 import { sitecorePagePropsFactory } from 'lib/page-props-factory';
+import { sitemapFetcher } from 'lib/sitemap-fetcher';
 // different componentFactory method will be used based on whether page is being edited
 import { componentFactory, editingComponentFactory } from 'temp/componentFactory';
-import { sitemapFetcher } from 'lib/sitemap-fetcher';
 
 const SitecorePage = ({ notFound, componentProps, layoutData }: SitecorePageProps): JSX.Element => {
   useEffect(() => {

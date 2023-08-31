@@ -1,4 +1,4 @@
-import React from 'react';
+// Global
 import {
   Image as JssImage,
   Link as JssLink,
@@ -8,6 +8,7 @@ import {
   Text,
   useSitecoreContext,
 } from '@sitecore-jss/sitecore-jss-nextjs';
+import React from 'react';
 
 interface Fields {
   Image: ImageField;
@@ -16,6 +17,7 @@ interface Fields {
 }
 
 type ImageProps = {
+  rendering: { [key: string]: string };
   params: { [key: string]: string };
   fields: Fields;
 };
@@ -30,6 +32,7 @@ const ImageDefault = (props: ImageProps): JSX.Element => (
 
 export const Banner = (props: ImageProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
+
   const backgroundStyle = { backgroundImage: `url('${props?.fields?.Image?.value?.src}')` };
   const modifyImageProps = {
     ...props.fields.Image,
@@ -52,8 +55,10 @@ export const Default = (props: ImageProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
 
   if (props.fields) {
-    const Image = () => <JssImage field={props.fields.Image} />;
     const id = props.params.RenderingIdentifier;
+    const { componentName, dataSource, uid } = props.rendering;
+
+    const Image = () => <JssImage field={props.fields.Image} />;
 
     return (
       <div className={`component image ${props.params.styles}`} id={id ? id : undefined}>
@@ -61,9 +66,16 @@ export const Default = (props: ImageProps): JSX.Element => {
           {sitecoreContext.pageState === 'edit' ? (
             <Image />
           ) : (
-            <JssLink field={props.fields.TargetUrl}>
-              <Image />
-            </JssLink>
+            <>
+              <JssLink
+                data-gtm-datasource-id={uid}
+                data-gtm-datasource-name={dataSource}
+                data-gtm-component-name={componentName}
+                field={props.fields.TargetUrl}
+              >
+                <Image />
+              </JssLink>
+            </>
           )}
           <Text
             tag="span"
