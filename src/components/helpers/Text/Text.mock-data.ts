@@ -1,4 +1,5 @@
 const defaultData = {
+  className: 'text-black',
   tag: 'p',
   text: 'This is a standard paragraph.',
 };
@@ -6,49 +7,49 @@ const defaultData = {
 export default defaultData;
 
 export const blockquote = {
-  className: '',
+  className: 'text-black',
   tag: 'blockquote',
   text: 'A well-known quote, contained in a blockquote element.',
 };
 
 export const bold = {
-  className: '',
+  className: 'text-black',
   tag: 'b',
   text: 'This is some bold text.',
 };
 
 export const deleted = {
-  className: '',
+  className: 'text-black',
   tag: 'del',
   text: 'This is some deleted (struck through) text.',
 };
 
 export const em = {
-  className: '',
+  className: 'text-black',
   tag: 'em',
   text: 'This is some emphasized text',
 };
 
 export const heading = {
-  className: 'text-3xl',
+  className: 'text-3xl text-black',
   tag: 'h1',
   text: 'h1. Heading',
 };
 
 export const italics = {
-  className: '',
+  className: 'text-black',
   tag: 'i',
   text: 'This is some italicized text.',
 };
 
 export const small = {
-  className: '',
+  className: 'text-black',
   tag: 'small',
   text: 'This is text in a small tag',
 };
 
 export const span = {
-  className: '',
+  className: 'text-black',
   tag: 'span',
   text: 'This is text in a span tag.',
 };

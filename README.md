@@ -48,3 +48,28 @@ This project has been made compatible with multiple package management solutions
 - `npm run storybook` will start Storybook in disconnected (local) mode.
 - `npm run start:connected` will start the project in connected mode. (Requires an XM Cloud or remote Sitecore 1.03 instance.)
 - `npm run test` will execute the project's Jest test suite.
+
+### Visual Unit Testing
+
+This project includes visual unit testing via [BackstopJS](https://github.com/garris/BackstopJS/blob/master/README.md). To execute the test suite and approve changes, take the following steps:
+
+1. Install dependecies:
+
+   - [Docker](https://www.docker.com/get-started/)
+
+1. Start Storybook
+
+   ```
+   $ npm run storybook
+   ```
+
+1. Execute the BackstopJS test suite
+
+   ```
+   $ npm run backstop-test
+   ```
+
+1. Review and approve all changes
+   ```
+   $ npm run backsotp-approve
+   ```
