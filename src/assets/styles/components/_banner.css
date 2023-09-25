@@ -1,0 +1,3 @@
+.btn-full {
+  @apply w-full p-2 text-white rounded-full bg-blue-500 text-center hover:bg-blue-800 select-none transition-all duration-300 cursor-pointer;
+}
