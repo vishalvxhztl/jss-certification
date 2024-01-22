@@ -24,7 +24,7 @@ export type BannerProps = {
   fields: BannerFields;
 };
 
-const ContentBlock = ({ fields }: BannerProps): JSX.Element => {
+const Banner = ({ fields }: BannerProps): JSX.Element => {
   //Handle Classname as per sitecore position
   const alignmentClass =
     fields?.contentPosition?.value.trim().toLowerCase() === 'left'
@@ -92,4 +92,4 @@ const ContentBlock = ({ fields }: BannerProps): JSX.Element => {
 
 // @todo: Figure out how to mock isPageEditing, or if it even matters, in Storybook.
 // export default withDatasourceCheck()<ContentBlockProps>(ContentBlock);
-export default ContentBlock;
+export default Banner;
