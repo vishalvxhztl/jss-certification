@@ -2,7 +2,7 @@
 
 exports[`renders as disabled 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text min-w-[10rem]"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white min-w-[10rem]"
   disabled=""
 >
   <div
@@ -15,7 +15,7 @@ exports[`renders as disabled 1`] = `
 
 exports[`renders correctly 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text min-w-[10rem]"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white min-w-[10rem]"
 >
   <div
     class="gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px"
@@ -27,7 +27,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders with icon only 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white"
 >
   <div
     class="gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px"
@@ -53,7 +53,7 @@ exports[`renders with icon only 1`] = `
 
 exports[`renders with left icon 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text min-w-[10rem]"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white min-w-[10rem]"
 >
   <div
     class="gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px"
@@ -80,7 +80,7 @@ exports[`renders with left icon 1`] = `
 
 exports[`renders with loading indicator 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text min-w-[10rem]"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white min-w-[10rem]"
 >
   <div
     class="gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px"
@@ -106,7 +106,7 @@ exports[`renders with loading indicator 1`] = `
 
 exports[`renders with right icon 1`] = `
 <button
-  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-primary hover:text-theme-btn-primary-text/50 text-theme-btn-primary-text min-w-[10rem]"
+  class="disabled:bg-gray-light disabled:cursor-not-allowed disabled:text-gray enabled:duration-150 enabled:transition hover:ease-in h-10 inline-block leading-10 py-0 px-4 rounded-md text-center whitespace-nowrap bg-brand-primary hover:text-white/50 text-white min-w-[10rem]"
 >
   <div
     class="gap-4 h-10 inline-flex items-center justify-center leading-10 relative -top-px"

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  class="bg-theme-bg relative h-screen max-h-full w-full flex justify-center"
+  data-component="authorable/general/banner"
+  data-testid="Banner"
+>
+  <img
+    alt="dummy Image"
+    class="object-cover z-0"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="100vw"
+    src="/_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=3840&q=75"
+    srcset="/_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fdummyimage.com%2F16%3A9x1080%2F&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+  />
+  <div
+    class="z-1 absolute top-1/2 -translate-y-1/2 md:w-1/3 flex flex-col items-center gap-2 p-5"
+  >
+    <h2
+      class="font-bold text-center text-lg md:text-2xl lg:text-3xl"
+    >
+      Connected experiences fine-tuned for your customers
+    </h2>
+    <div
+      class="rte"
+    >
+      <p>
+        Join Horizontal at Connections 2023 and discover how we create personalized and connected experiences tailored for every customer.
+      </p>
+    </div>
+    <a
+      class="text-blue-500 hover:text-blue-800"
+      href="https://www.horizontaldigital.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Read more
+      <span
+        class="sr-only"
+      >
+         (Opens in a new tab)
+      </span>
+      <span />
+    </a>
+    <a
+      class="btn-full"
+      href="https://www.horizontaldigital.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Learn more
+      <span
+        class="sr-only"
+      >
+         (Opens in a new tab)
+      </span>
+      <span />
+    </a>
+  </div>
+</div>
+`;

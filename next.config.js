@@ -22,6 +22,9 @@ const nextConfig = {
   env: {
     PUBLIC_URL: publicUrl,
   },
+  images: {
+    domains: [process.env.NEXT_PUBLIC_DOMAIN],
+  },
 
   i18n: {
     // These are all the locales you want to support in your application.

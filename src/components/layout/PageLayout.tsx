@@ -5,52 +5,50 @@
 // Global
 import {
   Placeholder,
-  getPublicUrl,
+  // getPublicUrl,
   LayoutServiceData,
-  Field,
+  // Field,
 } from '@sitecore-jss/sitecore-jss-nextjs';
-import Head from 'next/head';
 import React from 'react';
 
 // Local
 import Scripts from 'src/Scripts';
+import HeadMeta from '../helpers/HeadMeta';
 
 // Prefix public assets with a public URL to enable compatibility with Sitecore Experience Editor.
 // If you're not supporting the Experience Editor, you can remove this.
-const publicUrl = getPublicUrl();
 
 interface LayoutProps {
   layoutData: LayoutServiceData;
 }
 
-interface RouteFields {
-  [key: string]: unknown;
-  Title?: Field;
-}
+// export interface RouteFields {
+//   [key: string]: unknown;
+//   Title?: Field;
+// }
 
 const PageLayout = ({ layoutData }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
-  const fields = route?.fields as RouteFields;
+  // const fields = route?.fields as RouteFields;
+  // const fields = route?.fields;
+
   const isPageEditing = layoutData.sitecore.context.pageEditing;
   const mainClassPageEditing = isPageEditing ? 'editing-mode' : 'prod-mode';
 
   return (
     <>
       <Scripts />
-      <Head>
-        <title>{fields?.Title?.value?.toString() || 'Page'}</title>
-        <link rel="icon" href={`${publicUrl}/favicon.ico`} />
-      </Head>
+      <HeadMeta route={route} />
       {/* root placeholder for the app, which we add components to using route data */}
       <div className={mainClassPageEditing}>
         <header>
-          <div id="header">{route && <Placeholder name="headless-header" rendering={route} />}</div>
+          <div id="header">{route && <Placeholder name="jss-header" rendering={route} />}</div>
         </header>
         <main>
-          <div id="content">{route && <Placeholder name="headless-main" rendering={route} />}</div>
+          <div id="content">{route && <Placeholder name="jss-main" rendering={route} />}</div>
         </main>
         <footer>
-          <div id="footer">{route && <Placeholder name="headless-footer" rendering={route} />}</div>
+          <div id="footer">{route && <Placeholder name="jss-footer" rendering={route} />}</div>
         </footer>
       </div>
     </>
